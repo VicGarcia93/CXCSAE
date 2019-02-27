@@ -1,0 +1,10 @@
+c:\users\usuario 069\documents\visual studio 2013\Projects\PRUEBA CLIENTES1\PRUEBA CLIENTES1\bin\Debug\PRUEBA CLIENTES1.exe.config
+C:\Users\Usuario 069\documents\visual studio 2013\Projects\PRUEBA CLIENTES1\PRUEBA CLIENTES1\bin\Debug\PRUEBA CLIENTES1.exe
+C:\Users\Usuario 069\documents\visual studio 2013\Projects\PRUEBA CLIENTES1\PRUEBA CLIENTES1\bin\Debug\PRUEBA CLIENTES1.pdb
+C:\Users\Usuario 069\documents\visual studio 2013\Projects\PRUEBA CLIENTES1\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.csprojResolveAssemblyReference.cache
+C:\Users\Usuario 069\documents\visual studio 2013\Projects\PRUEBA CLIENTES1\PRUEBA CLIENTES1\obj\Debug\PRUEBA_CLIENTES1.Clientes.resources
+C:\Users\Usuario 069\documents\visual studio 2013\Projects\PRUEBA CLIENTES1\PRUEBA CLIENTES1\obj\Debug\PRUEBA_CLIENTES1.Otro_form.resources
+C:\Users\Usuario 069\documents\visual studio 2013\Projects\PRUEBA CLIENTES1\PRUEBA CLIENTES1\obj\Debug\PRUEBA_CLIENTES1.Properties.Resources.resources
+C:\Users\Usuario 069\documents\visual studio 2013\Projects\PRUEBA CLIENTES1\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.csproj.GenerateResource.Cache
+C:\Users\Usuario 069\documents\visual studio 2013\Projects\PRUEBA CLIENTES1\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.exe
+C:\Users\Usuario 069\documents\visual studio 2013\Projects\PRUEBA CLIENTES1\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.pdb
