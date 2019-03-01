@@ -11,3 +11,6 @@ C:\Users\Usuario 069\documents\visual studio 2013\Projects\PRUEBA CLIENTES1\PRUE
 C:\Users\Usuario 232\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\bin\Debug\PRUEBA CLIENTES1.exe.config
 C:\Users\Usuario 232\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.exe
 C:\Users\Usuario 232\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.pdb
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\bin\Debug\PRUEBA CLIENTES1.exe.config
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.exe
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.pdb
