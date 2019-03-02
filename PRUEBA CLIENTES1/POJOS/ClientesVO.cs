@@ -11,12 +11,16 @@ namespace PRUEBA_CLIENTES1.POJOS
         private string id;
         private string nombre;
         private string rfc;
+        private char status;
+        private char conCredito; 
 
-        public ClientesVO(string id, string nombre, string rfc)
+        public ClientesVO(string id, string nombre, string rfc, char status, char conCredito)
         {
             this.id = id;
             this.nombre = nombre;
             this.rfc = rfc;
+            this.status = status;
+            this.conCredito = conCredito;
         }
 
         public string Id
@@ -35,6 +39,18 @@ namespace PRUEBA_CLIENTES1.POJOS
         {
             get { return rfc; }
             set { rfc = value; }
+        }
+
+        public char Status
+        {
+            get { return status; }
+            set { status = value; }
+        }
+
+        public char ConCredito
+        {
+            get { return conCredito; }
+            set { conCredito = value; }
         }
     }
 }
