@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace PRUEBA_CLIENTES1
 {
+    using RutaBD = PRUEBA_CLIENTES1.Properties.Settings;
     public partial class Clientes : Form
     {
         public Clientes()
@@ -69,6 +70,14 @@ namespace PRUEBA_CLIENTES1
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TestForm testForm = new TestForm();
+            RutaBD.Default.empresaEnUso = (CboEmpresa.SelectedIndex + 1).ToString();
+            MessageBox.Show(RutaBD.Default.empresaEnUso);
+            testForm.Show();
         }
     }
 }

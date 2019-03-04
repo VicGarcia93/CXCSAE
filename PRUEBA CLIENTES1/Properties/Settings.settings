@@ -1,7 +1,24 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PRUEBA_CLIENTES1.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="bDLan1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\Users\\USUARIO1\\Documents\\BD\\SAE70EMPRE01.FDB</Value>
+    </Setting>
+    <Setting Name="bDFerre" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\Users\\USUARIO1\\Documents\\BD\\SAE70EMPRE02.FDB</Value>
+    </Setting>
+    <Setting Name="bDLlantasM" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\Users\\USUARIO1\\Documents\\BD\\SAE70EMPRE03.FDB</Value>
+    </Setting>
+    <Setting Name="bDLlantasE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\Users\\USUARIO1\\Documents\\BD\\SAE70EMPRE04.FDB</Value>
+    </Setting>
+    <Setting Name="bDLlantasP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\Users\\USUARIO1\\Documents\\BD\\SAE70EMPRE05.FDB</Value>
+    </Setting>
+    <Setting Name="empresaEnUso" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Null</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

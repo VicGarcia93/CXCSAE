@@ -14,3 +14,19 @@ C:\Users\Usuario 232\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTE
 C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\bin\Debug\PRUEBA CLIENTES1.exe.config
 C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.exe
 C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.pdb
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.csprojAssemblyReference.cache
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA_CLIENTES1.Clientes.resources
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA_CLIENTES1.Otro_form.resources
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA_CLIENTES1.Properties.Resources.resources
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA_CLIENTES1.TestForm.resources
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.csproj.GenerateResource.cache
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\bin\Debug\PRUEBA CLIENTES1.exe
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\bin\Debug\PRUEBA CLIENTES1.pdb
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\bin\Debug\EntityFramework.dll
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\bin\Debug\EntityFramework.xml
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\bin\Debug\FirebirdSql.Data.FirebirdClient.pdb
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.csproj.CopyComplete
