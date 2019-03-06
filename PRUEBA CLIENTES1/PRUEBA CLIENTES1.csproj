@@ -96,6 +96,7 @@
     <Compile Include="Otro form.Designer.cs">
       <DependentUpon>Otro form.cs</DependentUpon>
     </Compile>
+    <Compile Include="POJOS\ClienteAbonos.cs" />
     <Compile Include="POJOS\ClienteDetalleVO.cs" />
     <Compile Include="POJOS\ClientesVO.cs" />
     <Compile Include="Program.cs" />

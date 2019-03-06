@@ -87,6 +87,15 @@ namespace PRUEBA_CLIENTES1.Datos
 
         }
 
+        public DataSet GetClientesCargosAbonos(ClienteDetalleVO clienteDetalle)
+        {
+            DataSet dataClientes = new DataSet();
+            if (String.IsNullOrEmpty(clienteDetalle.claveInicial))
+            {
+
+            }
+        }
+
         private FbCommand ObtenerOrdenSQL(string sentenciaSQL, ArrayList parametros)
         {
             try
