@@ -30,6 +30,7 @@
         {
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnHistorialSaldos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,11 +57,23 @@
             this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
             // 
+            // btnHistorialSaldos
+            // 
+            this.btnHistorialSaldos.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorialSaldos.Location = new System.Drawing.Point(102, 6);
+            this.btnHistorialSaldos.Name = "btnHistorialSaldos";
+            this.btnHistorialSaldos.Size = new System.Drawing.Size(91, 27);
+            this.btnHistorialSaldos.TabIndex = 2;
+            this.btnHistorialSaldos.Text = "Antigüedad";
+            this.btnHistorialSaldos.UseVisualStyleBackColor = true;
+            this.btnHistorialSaldos.Click += new System.EventHandler(this.btnHistorialSaldos_Click);
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnHistorialSaldos);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvClientes);
             this.Name = "TestForm";
@@ -74,5 +87,6 @@
 
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHistorialSaldos;
     }
 }

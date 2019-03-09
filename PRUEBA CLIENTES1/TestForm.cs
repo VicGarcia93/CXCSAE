@@ -25,6 +25,17 @@ namespace PRUEBA_CLIENTES1
             dgvClientes.DataSource = clienteDAO.GetClientes(cliente).Tables[0];
 
         }
+        private void ObtenerHistorialSaldos()
+        {
+            ClienteDetalleVO clienteDetalle = new ClienteDetalleVO()
+            {
+                fechaInicial = "02/22/2018",
+                fechaFinal = "02/22/2018",
+                status = "A",
+            };
+            ClienteDAO cliente = new ClienteDAO();
+            dgvClientes.DataSource = cliente.GetClientesCargosAbonos(clienteDetalle);
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -34,6 +45,11 @@ namespace PRUEBA_CLIENTES1
         private void button1_MouseClick(object sender, MouseEventArgs e)
         {
             
+        }
+
+        private void btnHistorialSaldos_Click(object sender, EventArgs e)
+        {
+            ObtenerHistorialSaldos();
         }
     }
 }
