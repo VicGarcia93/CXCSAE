@@ -30,6 +30,7 @@ C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\
 C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\bin\Debug\FirebirdSql.Data.FirebirdClient.pdb
 C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.csproj.CopyComplete
+<<<<<<< HEAD
 C:\Users\Usuario 069\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\bin\Debug\PRUEBA CLIENTES1.exe.config
 C:\Users\Usuario 069\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\bin\Debug\PRUEBA CLIENTES1.exe
 C:\Users\Usuario 069\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\bin\Debug\PRUEBA CLIENTES1.pdb
@@ -50,3 +51,6 @@ C:\Users\Usuario 069\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTE
 C:\Users\Usuario 069\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.exe
 C:\Users\Usuario 069\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.pdb
 C:\Users\Usuario 069\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA_CLIENTES1.Form1.resources
+=======
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.csproj.ResolveComReference.cache
+>>>>>>> origin/master
