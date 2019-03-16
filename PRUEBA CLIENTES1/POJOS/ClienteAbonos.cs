@@ -8,6 +8,8 @@ namespace PRUEBA_CLIENTES1.POJOS
 {
     class ClienteAbonos
     {
-       
+        public string claveCliente { get; set; }
+        public string nombreCliente { get; set; }
+        public string cargos { get; set; }
     }
 }

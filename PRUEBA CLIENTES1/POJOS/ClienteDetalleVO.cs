@@ -9,17 +9,17 @@ namespace PRUEBA_CLIENTES1.POJOS
 
     class ClienteDetalleVO
     {
-        public string claveInicial {get;set;}
-        public string claveFinal { get; set;}
-        public string fechaInicial { get; set;}
-        public string fechaFinal { get; set;}
-        public string nombre{get;set;}
-        public string cargos{get;set;}
-        public string abono30 {get;set;}
-        public string abono60 {get;set;}
-        public string abono90 {get;set;}
-        public string abonoPlus90 {get;set;}
-        public string status { get; set;}
+        public string ClaveInicial {get;set;}
+        public string ClaveFinal { get; set;}
+        public string FechaInicial { get; set;}
+        public string FechaFinal { get; set;}
+        public string Nombre{get;set;}
+        public string Cargos{get;set;}
+        public string Abono30 {get;set;}
+        public string Abono60 {get;set;}
+        public string Abono90 {get;set;}
+        public string AbonoPlus90 {get;set;}
+        public string Status { get; set;}
     
     }
     
