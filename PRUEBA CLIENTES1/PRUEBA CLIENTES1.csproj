@@ -90,6 +90,12 @@
     </Compile>
     <Compile Include="Datos\ClienteDAO.cs" />
     <Compile Include="Datos\ConexionBD.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Otro form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </Compile>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Otro form.resx">
       <DependentUpon>Otro form.cs</DependentUpon>
@@ -147,6 +156,18 @@
     <Folder Include="Entidades\" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <None Include="Resources\veca.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\llantas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-mapa-mental-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-imac-filled-50.png" />
+=======
     <COMReference Include="Microsoft.Office.Core">
       <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
       <VersionMajor>2</VersionMajor>
@@ -174,6 +195,7 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+>>>>>>> origin/master
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
