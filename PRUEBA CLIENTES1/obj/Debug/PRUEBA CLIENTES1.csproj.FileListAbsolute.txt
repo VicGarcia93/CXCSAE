@@ -54,3 +54,5 @@ C:\Users\Usuario 069\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTE
 =======
 C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.csproj.ResolveComReference.cache
 >>>>>>> origin/master
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA_CLIENTES1.Form1.resources
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA_CLIENTES1.BuscarCliente.resources

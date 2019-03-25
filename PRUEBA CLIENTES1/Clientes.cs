@@ -13,13 +13,22 @@ namespace PRUEBA_CLIENTES1
     using RutaBD = PRUEBA_CLIENTES1.Properties.Settings;
     public partial class Clientes : Form
     {
+        
         public Clientes()
         {
             InitializeComponent();
+            CboEmpresa.SelectedIndex = int.Parse(RutaBD.Default.empresaEnUso) - 1;
+            FechaActual();
         }
         private void HolaMundo()
         {
             MessageBox.Show("Hola Mundo");
+        }
+        private void FechaActual()
+        {
+            DateTime dateTime;
+            dateTime = DateTime.Now;
+            toolStripStatusLabel1.Text =  dateTime.Date.ToLongDateString();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -39,7 +48,7 @@ namespace PRUEBA_CLIENTES1
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -103,6 +112,34 @@ namespace PRUEBA_CLIENTES1
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void Clientes_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form1 form1 = Form1.GetInstance();
+            form1.Close();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            txtCveIniCliente.Text = GetClaveCliente();
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbCveFinCliente_Click(object sender, EventArgs e)
+        {
+            txtCveFinCliente.Text = GetClaveCliente();
+            
+        }
+        private String GetClaveCliente()
+        {
+            BuscarCliente buscarCliente = new BuscarCliente();
+            buscarCliente.ShowDialog();
+            return buscarCliente.GetCveCliente();
         }
     }
 }

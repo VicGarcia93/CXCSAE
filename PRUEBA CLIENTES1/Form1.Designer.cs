@@ -74,10 +74,7 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.panel3);
@@ -85,16 +82,13 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel1.Location = new System.Drawing.Point(38, 56);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(807, 375);
+            this.panel1.Size = new System.Drawing.Size(807, 358);
             this.panel1.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -103,9 +97,9 @@
             this.panel3.Controls.Add(this.button9);
             this.panel3.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel3.ForeColor = System.Drawing.Color.Maroon;
-            this.panel3.Location = new System.Drawing.Point(34, 57);
+            this.panel3.Location = new System.Drawing.Point(34, 46);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(733, 58);
+            this.panel3.Size = new System.Drawing.Size(733, 54);
             this.panel3.TabIndex = 29;
             // 
             // label3
@@ -143,9 +137,6 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -160,7 +151,7 @@
             this.panel2.Controls.Add(this.button3);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel2.ForeColor = System.Drawing.Color.Maroon;
-            this.panel2.Location = new System.Drawing.Point(34, 56);
+            this.panel2.Location = new System.Drawing.Point(34, 45);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(734, 259);
             this.panel2.TabIndex = 28;
@@ -212,6 +203,7 @@
             this.button5.TabIndex = 34;
             this.button5.Text = "Cancelar";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -223,6 +215,7 @@
             this.button4.TabIndex = 33;
             this.button4.Text = "Aceptar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -274,7 +267,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(951, 537);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(838, 392);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";

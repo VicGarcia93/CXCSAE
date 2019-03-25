@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbEstatus = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.cmbFecha = new System.Windows.Forms.ComboBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCveFinCliente = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtCveIniCliente = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.LblEmpresa = new System.Windows.Forms.Label();
             this.CboEmpresa = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvSaldos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,22 +65,17 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.xDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pbCveFinCliente = new System.Windows.Forms.PictureBox();
+            this.pbCveIniCliente = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSaldos)).BeginInit();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCveFinCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCveIniCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -109,7 +104,7 @@
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.comboBox2);
+            this.panel6.Controls.Add(this.cmbEstatus);
             this.panel6.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel6.Location = new System.Drawing.Point(593, 62);
             this.panel6.Name = "panel6";
@@ -130,24 +125,24 @@
             this.label2.TabIndex = 34;
             this.label2.Text = "ESTATUS";
             // 
-            // comboBox2
+            // cmbEstatus
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbEstatus.FormattingEnabled = true;
+            this.cmbEstatus.Items.AddRange(new object[] {
             "             Todos ",
             "             Activos ",
             "             Suspendidos",
             "             Morosos "});
-            this.comboBox2.Location = new System.Drawing.Point(81, 34);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(128, 21);
-            this.comboBox2.TabIndex = 35;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.cmbEstatus.Location = new System.Drawing.Point(81, 34);
+            this.cmbEstatus.Name = "cmbEstatus";
+            this.cmbEstatus.Size = new System.Drawing.Size(128, 21);
+            this.cmbEstatus.TabIndex = 35;
+            this.cmbEstatus.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.comboBox1);
+            this.panel5.Controls.Add(this.cmbFecha);
             this.panel5.Controls.Add(this.dateTimePicker3);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.label7);
@@ -159,6 +154,23 @@
             this.panel5.Size = new System.Drawing.Size(257, 81);
             this.panel5.TabIndex = 5;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // cmbFecha
+            // 
+            this.cmbFecha.FormattingEnabled = true;
+            this.cmbFecha.Items.AddRange(new object[] {
+            "No filtrar fechas ",
+            "Fechas seleccionadas",
+            "Hoy ",
+            "Ayer",
+            "Este semana",
+            "Este mes",
+            "Mes anterior"});
+            this.cmbFecha.Location = new System.Drawing.Point(79, 3);
+            this.cmbFecha.Name = "cmbFecha";
+            this.cmbFecha.Size = new System.Drawing.Size(126, 21);
+            this.cmbFecha.TabIndex = 36;
+            this.cmbFecha.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // dateTimePicker3
             // 
@@ -215,31 +227,37 @@
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.pictureBox6);
+            this.panel4.Controls.Add(this.pbCveFinCliente);
+            this.panel4.Controls.Add(this.txtCveFinCliente);
+            this.panel4.Controls.Add(this.pbCveIniCliente);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.textBox8);
+            this.panel4.Controls.Add(this.txtCveIniCliente);
             this.panel4.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel4.Location = new System.Drawing.Point(11, 62);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(260, 81);
             this.panel4.TabIndex = 4;
             // 
-            // pictureBox6
+            // label1
             // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureBox6.Image = global::PRUEBA_CLIENTES1.Properties.Resources.Buscar;
-            this.pictureBox6.Location = new System.Drawing.Point(101, 42);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(17, 19);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 31;
-            this.pictureBox6.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Window;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(1, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 21);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "CLIENTE";
+            // 
+            // txtCveFinCliente
+            // 
+            this.txtCveFinCliente.Location = new System.Drawing.Point(174, 42);
+            this.txtCveFinCliente.Name = "txtCveFinCliente";
+            this.txtCveFinCliente.Size = new System.Drawing.Size(56, 20);
+            this.txtCveFinCliente.TabIndex = 34;
             // 
             // label10
             // 
@@ -259,12 +277,12 @@
             this.label11.TabIndex = 28;
             this.label11.Text = "Hasta";
             // 
-            // textBox8
+            // txtCveIniCliente
             // 
-            this.textBox8.Location = new System.Drawing.Point(61, 41);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(56, 20);
-            this.textBox8.TabIndex = 27;
+            this.txtCveIniCliente.Location = new System.Drawing.Point(61, 41);
+            this.txtCveIniCliente.Name = "txtCveIniCliente";
+            this.txtCveIniCliente.Size = new System.Drawing.Size(56, 20);
+            this.txtCveIniCliente.TabIndex = 27;
             // 
             // button1
             // 
@@ -276,6 +294,20 @@
             this.button1.Text = "Testing";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkRed;
+            this.label3.Location = new System.Drawing.Point(313, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(373, 41);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "ANTIGÜEDAD DE SALDOS";
+            this.label3.UseCompatibleTextRendering = true;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // LblEmpresa
             // 
@@ -317,51 +349,29 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkRed;
-            this.label3.Location = new System.Drawing.Point(313, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(373, 41);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "ANTIGÜEDAD DE SALDOS";
-            this.label3.UseCompatibleTextRendering = true;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.SystemColors.ControlLight;
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.MenuHighlight;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(831, 10);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(127, 20);
-            this.dateTimePicker1.TabIndex = 9;
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.Maroon;
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.dgvSaldos);
             this.panel2.Location = new System.Drawing.Point(12, 193);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(963, 364);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // dataGridView1
+            // dgvSaldos
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvSaldos.AllowUserToAddRows = false;
+            this.dgvSaldos.AllowUserToDeleteRows = false;
+            this.dgvSaldos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvSaldos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dgvSaldos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSaldos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.clmNombre,
             this.Column2,
@@ -372,76 +382,86 @@
             this.tbl90,
             this.Column3,
             this.Column4});
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 38);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(920, 287);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvSaldos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
+            this.dgvSaldos.Location = new System.Drawing.Point(15, 38);
+            this.dgvSaldos.Name = "dgvSaldos";
+            this.dgvSaldos.ReadOnly = true;
+            this.dgvSaldos.Size = new System.Drawing.Size(929, 313);
+            this.dgvSaldos.TabIndex = 0;
+            this.dgvSaldos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Clave";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 81;
             // 
             // clmNombre
             // 
             this.clmNombre.HeaderText = "Nombre";
             this.clmNombre.Name = "clmNombre";
+            this.clmNombre.ReadOnly = true;
             this.clmNombre.Width = 82;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Saldo inicial ";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 81;
             // 
             // clmCargos
             // 
             this.clmCargos.HeaderText = "Cargos";
             this.clmCargos.Name = "clmCargos";
+            this.clmCargos.ReadOnly = true;
             this.clmCargos.Width = 82;
             // 
             // clmAbono30
             // 
             this.clmAbono30.HeaderText = "Abono 30";
             this.clmAbono30.Name = "clmAbono30";
+            this.clmAbono30.ReadOnly = true;
             this.clmAbono30.Width = 81;
             // 
             // tblAbono3160
             // 
             this.tblAbono3160.HeaderText = "Abono 31-60 ";
             this.tblAbono3160.Name = "tblAbono3160";
+            this.tblAbono3160.ReadOnly = true;
             this.tblAbono3160.Width = 81;
             // 
             // tblAbono6190
             // 
             this.tblAbono6190.HeaderText = "Abono 61-90";
             this.tblAbono6190.Name = "tblAbono6190";
+            this.tblAbono6190.ReadOnly = true;
             this.tblAbono6190.Width = 82;
             // 
             // tbl90
             // 
             this.tbl90.HeaderText = "Abono + 90";
             this.tbl90.Name = "tbl90";
+            this.tbl90.ReadOnly = true;
             this.tbl90.Width = 81;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Saldo final";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             this.Column3.Width = 82;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Estatus";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 81;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dateTimePicker1);
             this.panel3.Location = new System.Drawing.Point(12, 563);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(963, 40);
@@ -450,8 +470,7 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripSplitButton1});
+            this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 635);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1023, 22);
@@ -461,76 +480,38 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
-            // toolStripSplitButton1
+            // pbCveFinCliente
             // 
-            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xDToolStripMenuItem});
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(32, 20);
-            this.toolStripSplitButton1.Text = "toolStripSplitButton1";
-            // 
-            // xDToolStripMenuItem
-            // 
-            this.xDToolStripMenuItem.Name = "xDToolStripMenuItem";
-            this.xDToolStripMenuItem.Size = new System.Drawing.Size(87, 22);
-            this.xDToolStripMenuItem.Text = "xD";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "No filtrar fechas ",
-            "Fechas seleccionadas",
-            "Hoy ",
-            "Ayer",
-            "Este semana",
-            "Este mes",
-            "Mes anterior"});
-            this.comboBox1.Location = new System.Drawing.Point(79, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(126, 21);
-            this.comboBox1.TabIndex = 36;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pbCveFinCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureBox1.Image = global::PRUEBA_CLIENTES1.Properties.Resources.Buscar;
-            this.pictureBox1.Location = new System.Drawing.Point(214, 43);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(17, 19);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
+            this.pbCveFinCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pbCveFinCliente.Image = global::PRUEBA_CLIENTES1.Properties.Resources.Buscar;
+            this.pbCveFinCliente.Location = new System.Drawing.Point(214, 43);
+            this.pbCveFinCliente.Name = "pbCveFinCliente";
+            this.pbCveFinCliente.Size = new System.Drawing.Size(17, 19);
+            this.pbCveFinCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCveFinCliente.TabIndex = 35;
+            this.pbCveFinCliente.TabStop = false;
+            this.pbCveFinCliente.Click += new System.EventHandler(this.pbCveFinCliente_Click);
             // 
-            // textBox1
+            // pbCveIniCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(174, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(56, 20);
-            this.textBox1.TabIndex = 34;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Window;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(1, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 21);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "CLIENTE";
+            this.pbCveIniCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbCveIniCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pbCveIniCliente.Image = global::PRUEBA_CLIENTES1.Properties.Resources.Buscar;
+            this.pbCveIniCliente.Location = new System.Drawing.Point(101, 42);
+            this.pbCveIniCliente.Name = "pbCveIniCliente";
+            this.pbCveIniCliente.Size = new System.Drawing.Size(17, 19);
+            this.pbCveIniCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCveIniCliente.TabIndex = 31;
+            this.pbCveIniCliente.TabStop = false;
+            this.pbCveIniCliente.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // Clientes
             // 
@@ -543,6 +524,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Clientes";
             this.Text = " ";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Clientes_FormClosed);
             this.Load += new System.EventHandler(this.Clientes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -552,13 +534,12 @@
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSaldos)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCveFinCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCveIniCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -571,13 +552,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvSaldos;
         private System.Windows.Forms.ComboBox CboEmpresa;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
-        private System.Windows.Forms.ToolStripMenuItem xDToolStripMenuItem;
         private System.Windows.Forms.Label LblEmpresa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmNombre;
@@ -593,21 +570,22 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pbCveIniCliente;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtCveIniCliente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbEstatus;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbFecha;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pbCveFinCliente;
+        private System.Windows.Forms.TextBox txtCveFinCliente;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
 

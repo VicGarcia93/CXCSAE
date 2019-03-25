@@ -14,8 +14,7 @@ namespace PRUEBA_CLIENTES1.Datos
     class ClienteDAO
     {
         List<ClienteDetalleVO> clientesCargosAbonos;
-        List<ClienteDetalleVO> clientesCargosDetallado;
-        List<ClienteDetalleVO> clientesAbonosDetallado;
+      
 
         public ClienteDAO()
         {
@@ -54,13 +53,13 @@ namespace PRUEBA_CLIENTES1.Datos
                 }
                 if (!String.IsNullOrEmpty(clientes.Nombre.Trim()))
                 {
-                    campos.Append("cli.nombre = @Nombre AND ");
-                    parametros.Add(new FbParameter("@Nombre", clientes.Nombre)); 
+                    campos.Append("cli.nombre like @Nombre AND ");
+                    parametros.Add(new FbParameter("@Nombre", "%" + clientes.Nombre + "%")); 
                 }
                 if (!String.IsNullOrEmpty(clientes.Rfc.Trim()))
                 {
-                    campos.Append("cli.rfc = @Rfc AND ");
-                    parametros.Add(new FbParameter("@Rfc", clientes.Rfc));
+                    campos.Append("cli.rfc like @Rfc AND ");
+                    parametros.Add(new FbParameter("@Rfc", "%" + clientes.Rfc + "%"));
                 }
                 if (!String.IsNullOrEmpty(clientes.Status.ToString().Trim()))
                 {
@@ -81,7 +80,7 @@ namespace PRUEBA_CLIENTES1.Datos
 
                 FbDataAdapter dataAdapter = new FbDataAdapter(ObtenerOrdenSQL(sQLString.ToString(),parametros));
                 dataAdapter.Fill(ds);
-                System.Windows.Forms.MessageBox.Show(ds.Tables[0].Rows.Count.ToString()); 
+               // System.Windows.Forms.MessageBox.Show(ds.Tables[0].Rows.Count.ToString()); 
                 return ds;
             }catch(Exception e)
             {

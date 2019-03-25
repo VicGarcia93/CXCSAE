@@ -6,6 +6,7 @@ using System.Linq;
 using System.Windows.Forms;
 using PRUEBA_CLIENTES1.Datos;
 using PRUEBA_CLIENTES1.POJOS;
+using Microsoft.Office;
 
 namespace PRUEBA_CLIENTES1
 {
