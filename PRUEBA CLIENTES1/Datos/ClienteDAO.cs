@@ -100,8 +100,9 @@ namespace PRUEBA_CLIENTES1.Datos
             DataTable dtAbonosDetalle = new DataTable();
 
 
-            sqlStringCargosGeneral.Append(@"SELECT mov.cve_clie,cli.nombre, SUM(mov.importe) as cargos, cli.status
-                                            FROM cuen_m0" + RutaBD.Default.empresaEnUso + @" mov, clie0" + RutaBD.Default.empresaEnUso + @" cli
+            sqlStringCargosGeneral.Append(@"SELECT mov.cve_clie,cli.nombre, mov.importe as cargos, cli.status,fac.contado
+                                            FROM cuen_m0" + RutaBD.Default.empresaEnUso + @" mov, clie0" + RutaBD.Default.empresaEnUso + @" cli,
+                                                   factf0" + RutaBD.Default.empresaEnUso + @" fac
                                             WHERE mov.tipo_mov = 'C'
                                             AND mov.cve_clie = cli.clave
                                             AND mov.fecha_apli BETWEEN '" + clienteDetalle.FechaInicial + "' AND '" + clienteDetalle.FechaFinal + @"'
@@ -130,7 +131,7 @@ namespace PRUEBA_CLIENTES1.Datos
                 { //Clave final no es null
                     sqlStringCargosGeneral.Append(@" AND mov.cve_clie BETWEEN (SELECT clie0" + RutaBD.Default.empresaEnUso + @".clave FROM clie0" + RutaBD.Default.empresaEnUso + @" ORDER BY clie0" + RutaBD.Default.empresaEnUso + @".clave ASC ROWS 1)
                                              AND '" + clienteDetalle.ClaveFinal + "'");
-                    sqlStringCargosDetalle.Append(@" AND mov.cve_clie BETWEEN (SELECT clie0" + RutaBD.Default.empresaEnUso + @".clave FROM clie0" + RutaBD.Default.empresaEnUso + @" ORDER BY clie0" + RutaBD.Default.empresaEnUso + @".clave ASC ROWS 1)
+                    sqlStringCargosDetalle.Append(@" AND det.cve_clie BETWEEN (SELECT clie0" + RutaBD.Default.empresaEnUso + @".clave FROM clie0" + RutaBD.Default.empresaEnUso + @" ORDER BY clie0" + RutaBD.Default.empresaEnUso + @".clave ASC ROWS 1)
                                              AND '" + clienteDetalle.ClaveFinal + "'");
                     sqlStringAbonosDetalle.Append(@" AND det.cve_clie BETWEEN (SELECT clie0" + RutaBD.Default.empresaEnUso + @".clave FROM clie0" + RutaBD.Default.empresaEnUso + @" ORDER BY clie0" + RutaBD.Default.empresaEnUso + @".clave ASC ROWS 1)
                                              AND '" + clienteDetalle.ClaveFinal + "'");
@@ -147,7 +148,7 @@ namespace PRUEBA_CLIENTES1.Datos
                 { //Clave final no es null
                     sqlStringCargosGeneral.Append(@" AND mov.cve_clie BETWEEN '" + clienteDetalle.ClaveInicial + 
                                             "' AND '" + clienteDetalle.ClaveFinal + "'");
-                    sqlStringCargosDetalle.Append(@" AND mov.cve_clie BETWEEN '" + clienteDetalle.ClaveInicial + 
+                    sqlStringCargosDetalle.Append(@" AND det.cve_clie BETWEEN '" + clienteDetalle.ClaveInicial + 
                                             "' AND '" + clienteDetalle.ClaveFinal + "'");
                     sqlStringAbonosDetalle.Append(@" AND det.cve_clie BETWEEN '" + clienteDetalle.ClaveInicial +
                                             "' AND '" + clienteDetalle.ClaveFinal + "'");
@@ -156,14 +157,14 @@ namespace PRUEBA_CLIENTES1.Datos
                 { //Clave final es null
                     sqlStringCargosGeneral.Append(@" AND mov.cve_clie BETWEEN '" + clienteDetalle.ClaveInicial 
                                                     + "' AND (SELECT clie0" + RutaBD.Default.empresaEnUso + @".clave FROM clie0" + RutaBD.Default.empresaEnUso + @" ORDER BY clie0" + RutaBD.Default.empresaEnUso + @".clave DESC ROWS 1)");
-                    sqlStringCargosDetalle.Append(@" AND mov.cve_clie BETWEEN '" + clienteDetalle.ClaveInicial
+                    sqlStringCargosDetalle.Append(@" AND det.cve_clie BETWEEN '" + clienteDetalle.ClaveInicial
                                                     + "' AND (SELECT clie0" + RutaBD.Default.empresaEnUso + @".clave FROM clie0" + RutaBD.Default.empresaEnUso + @" ORDER BY clie0" + RutaBD.Default.empresaEnUso + @".clave DESC ROWS 1)");
                     sqlStringAbonosDetalle.Append(@" AND det.cve_clie BETWEEN '" + clienteDetalle.ClaveInicial
                                                     + "' AND (SELECT clie0" + RutaBD.Default.empresaEnUso + @".clave FROM clie0" + RutaBD.Default.empresaEnUso + @" ORDER BY clie0" + RutaBD.Default.empresaEnUso + @".clave DESC ROWS 1)");
                 }
             }
 
-            sqlStringCargosGeneral.Append(" GROUP BY mov.cve_clie, cli.nombre,cli.status");
+            //sqlStringCargosGeneral.Append(" GROUP BY mov.cve_clie, cli.nombre,cli.status");
             sqlStringCargosDetalle.Append(" GROUP BY det.cve_clie, cli.nombre,cli.status");
 
             FbDataAdapter adapterCargosGenerales = new FbDataAdapter(ObtenerOrdenSQL(sqlStringCargosGeneral.ToString(), null));
@@ -184,33 +185,39 @@ namespace PRUEBA_CLIENTES1.Datos
             ClienteDetalleVO nuevoCliente;
             for (int i = 0; i < filasCargos.Count; i++)
             {
-                ClienteDetalleVO cliente = clientesCargosAbonos.Find(x => x.ClaveInicial == filasCargos[i][0].ToString());
-                if(cliente != null)
+                string esContado = filasCargos[4].ToString();
+                if (esContado.Equals("N"))
                 {
-                    cliente.Cargos = (float.Parse(cliente.Cargos) + float.Parse(filasCargos[i][2].ToString())).ToString();
-                }
-                else
-                {
-                    nuevoCliente = new ClienteDetalleVO
+                    ClienteDetalleVO cliente = clientesCargosAbonos.Find(x => x.ClaveInicial == filasCargos[i][0].ToString());
+                    if (cliente != null)
                     {
-                        ClaveInicial = filasCargos[i][0].ToString(),
-                        ClaveFinal = filasCargos[i][0].ToString(),
-                        Nombre = filasCargos[i][1].ToString(),
-                        Cargos = filasCargos[i][2].ToString(),
-                        Abono30 = "0",
-                        Abono60 = "0",
-                        Abono90 = "0",
-                        AbonoPlus90 = "0",
-                        FechaFinal = "0",
-                        FechaInicial = "0",
-                        Status = filasCargos[i][3].ToString()
-                    };
-                    clientesCargosAbonos.Add(nuevoCliente);
+                        cliente.Cargos = (float.Parse(cliente.Cargos) + float.Parse(filasCargos[i][2].ToString())).ToString();
+                    }
+                    else
+                    {
+                        nuevoCliente = new ClienteDetalleVO
+                        {
+                            ClaveInicial = filasCargos[i][0].ToString(),
+                            ClaveFinal = filasCargos[i][0].ToString(),
+                            Nombre = filasCargos[i][1].ToString(),
+                            Cargos = filasCargos[i][2].ToString(),
+                            Abono30 = "0",
+                            Abono60 = "0",
+                            Abono90 = "0",
+                            AbonoPlus90 = "0",
+                            FechaFinal = "0",
+                            FechaInicial = "0",
+                            Status = filasCargos[i][3].ToString()
+                        };
+                        clientesCargosAbonos.Add(nuevoCliente);
+                    }
                 }
             }
+                
 
             for (int i = 0; i < filasCargosDetalle.Count; i++)
             {
+                
                 ClienteDetalleVO cliente = clientesCargosAbonos.Find(x => x.ClaveInicial == filasCargosDetalle[i][0].ToString());
                 if (cliente != null)
                 {

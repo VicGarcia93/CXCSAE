@@ -41,7 +41,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pbCveFinCliente = new System.Windows.Forms.PictureBox();
             this.txtCveFinCliente = new System.Windows.Forms.TextBox();
+            this.pbCveIniCliente = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCveIniCliente = new System.Windows.Forms.TextBox();
@@ -52,6 +54,9 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvSaldos = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,20 +67,15 @@
             this.tbl90 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.pbCveFinCliente = new System.Windows.Forms.PictureBox();
-            this.pbCveIniCliente = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCveFinCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCveIniCliente)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaldos)).BeginInit();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCveFinCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCveIniCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -252,12 +252,42 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "CLIENTE";
             // 
+            // pbCveFinCliente
+            // 
+            this.pbCveFinCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbCveFinCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pbCveFinCliente.Image = global::PRUEBA_CLIENTES1.Properties.Resources.Buscar;
+            this.pbCveFinCliente.Location = new System.Drawing.Point(214, 43);
+            this.pbCveFinCliente.Name = "pbCveFinCliente";
+            this.pbCveFinCliente.Size = new System.Drawing.Size(17, 19);
+            this.pbCveFinCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCveFinCliente.TabIndex = 35;
+            this.pbCveFinCliente.TabStop = false;
+            this.pbCveFinCliente.Click += new System.EventHandler(this.pbCveFinCliente_Click);
+            // 
             // txtCveFinCliente
             // 
             this.txtCveFinCliente.Location = new System.Drawing.Point(174, 42);
             this.txtCveFinCliente.Name = "txtCveFinCliente";
             this.txtCveFinCliente.Size = new System.Drawing.Size(56, 20);
             this.txtCveFinCliente.TabIndex = 34;
+            // 
+            // pbCveIniCliente
+            // 
+            this.pbCveIniCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbCveIniCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pbCveIniCliente.Image = global::PRUEBA_CLIENTES1.Properties.Resources.Buscar;
+            this.pbCveIniCliente.Location = new System.Drawing.Point(101, 42);
+            this.pbCveIniCliente.Name = "pbCveIniCliente";
+            this.pbCveIniCliente.Size = new System.Drawing.Size(17, 19);
+            this.pbCveIniCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCveIniCliente.TabIndex = 31;
+            this.pbCveIniCliente.TabStop = false;
+            this.pbCveIniCliente.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label10
             // 
@@ -390,76 +420,6 @@
             this.dgvSaldos.TabIndex = 0;
             this.dgvSaldos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Clave";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 81;
-            // 
-            // clmNombre
-            // 
-            this.clmNombre.HeaderText = "Nombre";
-            this.clmNombre.Name = "clmNombre";
-            this.clmNombre.ReadOnly = true;
-            this.clmNombre.Width = 82;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Saldo inicial ";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 81;
-            // 
-            // clmCargos
-            // 
-            this.clmCargos.HeaderText = "Cargos";
-            this.clmCargos.Name = "clmCargos";
-            this.clmCargos.ReadOnly = true;
-            this.clmCargos.Width = 82;
-            // 
-            // clmAbono30
-            // 
-            this.clmAbono30.HeaderText = "Abono 30";
-            this.clmAbono30.Name = "clmAbono30";
-            this.clmAbono30.ReadOnly = true;
-            this.clmAbono30.Width = 81;
-            // 
-            // tblAbono3160
-            // 
-            this.tblAbono3160.HeaderText = "Abono 31-60 ";
-            this.tblAbono3160.Name = "tblAbono3160";
-            this.tblAbono3160.ReadOnly = true;
-            this.tblAbono3160.Width = 81;
-            // 
-            // tblAbono6190
-            // 
-            this.tblAbono6190.HeaderText = "Abono 61-90";
-            this.tblAbono6190.Name = "tblAbono6190";
-            this.tblAbono6190.ReadOnly = true;
-            this.tblAbono6190.Width = 82;
-            // 
-            // tbl90
-            // 
-            this.tbl90.HeaderText = "Abono + 90";
-            this.tbl90.Name = "tbl90";
-            this.tbl90.ReadOnly = true;
-            this.tbl90.Width = 81;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Saldo final";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 82;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Estatus";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 81;
-            // 
             // panel3
             // 
             this.panel3.Location = new System.Drawing.Point(12, 563);
@@ -483,35 +443,83 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
-            // pbCveFinCliente
+            // Column1
             // 
-            this.pbCveFinCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbCveFinCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pbCveFinCliente.Image = global::PRUEBA_CLIENTES1.Properties.Resources.Buscar;
-            this.pbCveFinCliente.Location = new System.Drawing.Point(214, 43);
-            this.pbCveFinCliente.Name = "pbCveFinCliente";
-            this.pbCveFinCliente.Size = new System.Drawing.Size(17, 19);
-            this.pbCveFinCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCveFinCliente.TabIndex = 35;
-            this.pbCveFinCliente.TabStop = false;
-            this.pbCveFinCliente.Click += new System.EventHandler(this.pbCveFinCliente_Click);
+            this.Column1.DataPropertyName = "ClaveInicial";
+            this.Column1.HeaderText = "Clave";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 81;
             // 
-            // pbCveIniCliente
+            // clmNombre
             // 
-            this.pbCveIniCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbCveIniCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pbCveIniCliente.Image = global::PRUEBA_CLIENTES1.Properties.Resources.Buscar;
-            this.pbCveIniCliente.Location = new System.Drawing.Point(101, 42);
-            this.pbCveIniCliente.Name = "pbCveIniCliente";
-            this.pbCveIniCliente.Size = new System.Drawing.Size(17, 19);
-            this.pbCveIniCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCveIniCliente.TabIndex = 31;
-            this.pbCveIniCliente.TabStop = false;
-            this.pbCveIniCliente.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.clmNombre.DataPropertyName = "Nombre";
+            this.clmNombre.HeaderText = "Nombre";
+            this.clmNombre.Name = "clmNombre";
+            this.clmNombre.ReadOnly = true;
+            this.clmNombre.Width = 82;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Saldo inicial ";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 81;
+            // 
+            // clmCargos
+            // 
+            this.clmCargos.DataPropertyName = "Cargos";
+            this.clmCargos.HeaderText = "Cargos";
+            this.clmCargos.Name = "clmCargos";
+            this.clmCargos.ReadOnly = true;
+            this.clmCargos.Width = 82;
+            // 
+            // clmAbono30
+            // 
+            this.clmAbono30.DataPropertyName = "Abono30";
+            this.clmAbono30.HeaderText = "Abono 30";
+            this.clmAbono30.Name = "clmAbono30";
+            this.clmAbono30.ReadOnly = true;
+            this.clmAbono30.Width = 81;
+            // 
+            // tblAbono3160
+            // 
+            this.tblAbono3160.DataPropertyName = "Abono60";
+            this.tblAbono3160.HeaderText = "Abono 31-60 ";
+            this.tblAbono3160.Name = "tblAbono3160";
+            this.tblAbono3160.ReadOnly = true;
+            this.tblAbono3160.Width = 81;
+            // 
+            // tblAbono6190
+            // 
+            this.tblAbono6190.DataPropertyName = "Abono90";
+            this.tblAbono6190.HeaderText = "Abono 61-90";
+            this.tblAbono6190.Name = "tblAbono6190";
+            this.tblAbono6190.ReadOnly = true;
+            this.tblAbono6190.Width = 82;
+            // 
+            // tbl90
+            // 
+            this.tbl90.DataPropertyName = "AbonoPlus90";
+            this.tbl90.HeaderText = "Abono + 90";
+            this.tbl90.Name = "tbl90";
+            this.tbl90.ReadOnly = true;
+            this.tbl90.Width = 81;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Saldo final";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 82;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Status";
+            this.Column4.HeaderText = "Estatus";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 81;
             // 
             // Clientes
             // 
@@ -534,12 +542,12 @@
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCveFinCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCveIniCliente)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaldos)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCveFinCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCveIniCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -556,16 +564,6 @@
         private System.Windows.Forms.ComboBox CboEmpresa;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.Label LblEmpresa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmCargos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmAbono30;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tblAbono3160;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tblAbono6190;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tbl90;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
@@ -586,6 +584,16 @@
         private System.Windows.Forms.PictureBox pbCveFinCliente;
         private System.Windows.Forms.TextBox txtCveFinCliente;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCargos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmAbono30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tblAbono3160;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tblAbono6190;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tbl90;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }
 

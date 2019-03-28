@@ -46,7 +46,7 @@ namespace PRUEBA_CLIENTES1
             cveFinCliente = txtCveFinCliente.Text;
             fechaInicial = dateTimePicker2.Text;
             fechaFinal = dateTimePicker3.Text;
-            status = cmbEstatus.Text;
+            status = cmbEstatus.Text.Trim();
 
             ValidaCliente(cveIniCliente);
             ValidaCliente(cveFinCliente);
@@ -54,12 +54,20 @@ namespace PRUEBA_CLIENTES1
 
             clienteDetalleVO.ClaveInicial = cveIniCliente;
             clienteDetalleVO.ClaveFinal = cveFinCliente;
-            //clienteDetalleVO.FechaInicial = fechaInicial.Substring(4,6);
-            MessageBox.Show(fechaInicial.Substring(2,4));
-            clienteDetalleVO.FechaFinal = fechaFinal;
-            clienteDetalleVO.Status = status;
+            clienteDetalleVO.FechaInicial = fechaInicial.Substring(3,3) + fechaInicial.Substring(0,3) + fechaInicial.Substring(6,4);
 
-            dgvSaldos.DataSource  = clienteDAO.GetClientesCargosAbonos(clienteDetalleVO);
+            
+            clienteDetalleVO.FechaFinal = fechaFinal.Substring(3, 3) + fechaFinal.Substring(0, 3) + fechaFinal.Substring(6, 4);
+
+            clienteDetalleVO.Status = status.Substring(0, 1);
+
+
+            //dgvSaldos.DataSource  = clienteDAO.GetClientesCargosAbonos(clienteDetalleVO);
+            DataTable data = new DataTable();
+            dgvSaldos.AutoGenerateColumns = false;
+            
+            MessageBox.Show("cantidad: " + clienteDAO.GetClientesCargosAbonos(clienteDetalleVO).Count);
+            dgvSaldos.DataSource = clienteDAO.GetClientesCargosAbonos(clienteDetalleVO);
         }
         private Boolean ValidaCliente(string cveCliente)
         {
@@ -67,7 +75,7 @@ namespace PRUEBA_CLIENTES1
             {
                 for (int i = cveCliente.Length; i < 10; i++)
                 {
-                    cveCliente = " " + cveCliente;
+                    cveCliente = " " + cveCliente; 
                 }
 
             }
