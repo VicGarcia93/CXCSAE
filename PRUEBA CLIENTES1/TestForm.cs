@@ -27,8 +27,8 @@ namespace PRUEBA_CLIENTES1
         {
             ClienteDetalleVO clienteDetalle = new ClienteDetalleVO()
             {
-                FechaInicial = "02/22/2018",
-                FechaFinal = "02/22/2018",
+                FechaInicial = "12/22/2018",
+                FechaFinal = "12/22/2018",
                 Status = "A",
             };
             ClienteDAO cliente = new ClienteDAO();
