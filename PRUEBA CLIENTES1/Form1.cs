@@ -45,7 +45,7 @@ namespace PRUEBA_CLIENTES1
             
             
             //Mostrar Formulario
-            PRUEBA_CLIENTES1.Properties.Settings.Default.empresaEnUso = (comboBox1.SelectedIndex + 1).ToString();
+            PRUEBA_CLIENTES1.Properties.Settings.Default.empresaEnUso = (cboempresa.SelectedIndex + 1).ToString();
             PRUEBA_CLIENTES1.Properties.Settings.Default.Save();
             //Instanciar el objeto
             clientes = new Clientes();

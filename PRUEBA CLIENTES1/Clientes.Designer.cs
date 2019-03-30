@@ -67,6 +67,12 @@
             this.tbl90 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+<<<<<<< HEAD
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+=======
+>>>>>>> origin/master
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -115,7 +121,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Window;
+            this.label2.BackColor = System.Drawing.Color.White;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
@@ -124,6 +130,7 @@
             this.label2.Size = new System.Drawing.Size(79, 21);
             this.label2.TabIndex = 34;
             this.label2.Text = "ESTATUS";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // cmbEstatus
             // 
@@ -185,7 +192,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.Window;
+            this.label4.BackColor = System.Drawing.Color.White;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
@@ -242,7 +249,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Window;
+            this.label1.BackColor = System.Drawing.Color.White;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
@@ -251,6 +258,22 @@
             this.label1.Size = new System.Drawing.Size(74, 21);
             this.label1.TabIndex = 35;
             this.label1.Text = "CLIENTE";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pbCveFinCliente
+            // 
+            this.pbCveFinCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbCveFinCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pbCveFinCliente.Image = global::PRUEBA_CLIENTES1.Properties.Resources.Buscar;
+            this.pbCveFinCliente.Location = new System.Drawing.Point(214, 43);
+            this.pbCveFinCliente.Name = "pbCveFinCliente";
+            this.pbCveFinCliente.Size = new System.Drawing.Size(17, 19);
+            this.pbCveFinCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCveFinCliente.TabIndex = 35;
+            this.pbCveFinCliente.TabStop = false;
+            this.pbCveFinCliente.Click += new System.EventHandler(this.pbCveFinCliente_Click);
             // 
             // pbCveFinCliente
             // 
@@ -416,6 +439,7 @@
             this.dgvSaldos.Location = new System.Drawing.Point(15, 38);
             this.dgvSaldos.Name = "dgvSaldos";
             this.dgvSaldos.ReadOnly = true;
+            this.dgvSaldos.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dgvSaldos.Size = new System.Drawing.Size(929, 313);
             this.dgvSaldos.TabIndex = 0;
             this.dgvSaldos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -521,6 +545,32 @@
             this.Column4.ReadOnly = true;
             this.Column4.Width = 81;
             // 
+<<<<<<< HEAD
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(12, 563);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(963, 40);
+            this.panel3.TabIndex = 2;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 635);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1023, 22);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            // 
+=======
+>>>>>>> origin/master
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
