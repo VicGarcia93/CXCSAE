@@ -15,12 +15,22 @@ namespace PRUEBA_CLIENTES1
     using RutaBD = PRUEBA_CLIENTES1.Properties.Settings;
     public partial class Clientes : Form
     {
-        
+        String cveIniCliente;
+        String cveFinCliente;
+        String fechaInicial;
+        String fechaFinal;
+        String status;
+
         public Clientes()
         {
             InitializeComponent();
             CboEmpresa.SelectedIndex = int.Parse(RutaBD.Default.empresaEnUso) - 1;
             FechaActual();
+            cveIniCliente = "";
+            cveFinCliente = "";
+            fechaInicial = "";
+            fechaFinal = "";
+            status = "";
         }
         private void HolaMundo()
         {
@@ -36,11 +46,7 @@ namespace PRUEBA_CLIENTES1
         {
             ClienteDAO clienteDAO = new ClienteDAO();
             ClienteDetalleVO clienteDetalleVO = new ClienteDetalleVO();
-            String cveIniCliente = "";
-            String cveFinCliente = "";
-            String fechaInicial = "";
-            String fechaFinal = "";
-            String status = "";
+            
 
             cveIniCliente = txtCveIniCliente.Text;
             cveFinCliente = txtCveFinCliente.Text;
@@ -48,8 +54,8 @@ namespace PRUEBA_CLIENTES1
             fechaFinal = dateTimePicker3.Text;
             status = cmbEstatus.Text.Trim();
 
-            ValidaCliente(cveIniCliente);
-            ValidaCliente(cveFinCliente);
+            cveIniCliente = ValidaCliente(cveIniCliente);
+            cveFinCliente = ValidaCliente(cveFinCliente);
 
 
             clienteDetalleVO.ClaveInicial = cveIniCliente;
@@ -69,8 +75,9 @@ namespace PRUEBA_CLIENTES1
             MessageBox.Show("cantidad: " + clienteDAO.GetClientesCargosAbonos(clienteDetalleVO).Count);
             dgvSaldos.DataSource = clienteDAO.GetClientesCargosAbonos(clienteDetalleVO);
         }
-        private Boolean ValidaCliente(string cveCliente)
+        private String ValidaCliente(string cveCliente)
         {
+        
             if (!cveCliente.Equals("MOSTR"))
             {
                 for (int i = cveCliente.Length; i < 10; i++)
@@ -81,7 +88,7 @@ namespace PRUEBA_CLIENTES1
             }
             //Verificar si existe en la Base de datos
 
-            return true;
+            return cveCliente;
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

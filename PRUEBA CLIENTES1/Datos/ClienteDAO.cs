@@ -91,6 +91,7 @@ namespace PRUEBA_CLIENTES1.Datos
 
         public List<ClienteDetalleVO> GetClientesCargosAbonos(ClienteDetalleVO clienteDetalle)
         {
+            Console.WriteLine("Run: GetClientesCargosAbonos");
             StringBuilder sqlStringCargosGeneral = new StringBuilder();
             StringBuilder sqlStringCargosDetalle = new StringBuilder();
             StringBuilder sqlStringAbonosDetalle = new StringBuilder();
@@ -99,14 +100,22 @@ namespace PRUEBA_CLIENTES1.Datos
             DataTable dtCargosDetalle = new DataTable();
             DataTable dtAbonosDetalle = new DataTable();
 
+            String statusCliente;
+
+            if (clienteDetalle.Status.Equals("T"))
+                statusCliente = "";
+            else
+                statusCliente = clienteDetalle.Status;
+
 
             sqlStringCargosGeneral.Append(@"SELECT mov.cve_clie,cli.nombre, mov.importe as cargos, cli.status,fac.contado
                                             FROM cuen_m0" + RutaBD.Default.empresaEnUso + @" mov, clie0" + RutaBD.Default.empresaEnUso + @" cli,
                                                    factf0" + RutaBD.Default.empresaEnUso + @" fac
                                             WHERE mov.tipo_mov = 'C'
+                                            AND mov.no_factura = fac.cve_doc
                                             AND mov.cve_clie = cli.clave
                                             AND mov.fecha_apli BETWEEN '" + clienteDetalle.FechaInicial + "' AND '" + clienteDetalle.FechaFinal + @"'
-                                            AND mov.cve_clie in (SELECT clie0" + RutaBD.Default.empresaEnUso + @".clave FROM clie0" + RutaBD.Default.empresaEnUso + @" WHERE clie0" + RutaBD.Default.empresaEnUso + @".status = '" + clienteDetalle.Status + @"')
+                                            AND mov.cve_clie in (SELECT clie0" + RutaBD.Default.empresaEnUso + @".clave FROM clie0" + RutaBD.Default.empresaEnUso + @" WHERE clie0" + RutaBD.Default.empresaEnUso + @".status = '%" + statusCliente + @"%')
                                             ");
 
             sqlStringCargosDetalle.Append(@"SELECT det.cve_clie, cli.nombre, SUM(det.importe) AS cargos, cli.status
@@ -114,7 +123,7 @@ namespace PRUEBA_CLIENTES1.Datos
                                             WHERE det.tipo_mov = 'C'                                            
                                             AND det.cve_clie = cli.clave
                                             AND det.fecha_apli BETWEEN '" + clienteDetalle.FechaInicial + "' AND '" + clienteDetalle.FechaFinal + @"'
-                                            AND det.cve_clie IN(SELECT clie0" + RutaBD.Default.empresaEnUso + @".clave FROM clie0" + RutaBD.Default.empresaEnUso + @" WHERE clie0" + RutaBD.Default.empresaEnUso + @".status = '" + clienteDetalle.Status + @"')
+                                            AND det.cve_clie IN(SELECT clie0" + RutaBD.Default.empresaEnUso + @".clave FROM clie0" + RutaBD.Default.empresaEnUso + @" WHERE clie0" + RutaBD.Default.empresaEnUso + @".status = '%" + statusCliente + @"%')
                                             ");
 
             sqlStringAbonosDetalle.Append(@"SELECT det.cve_clie, cli.nombre, det.importe, det.no_factura, fac.contado, det.fecha_apli, fac.fecha_doc, cli.status
@@ -122,7 +131,7 @@ namespace PRUEBA_CLIENTES1.Datos
                                             WHERE det.tipo_mov = 'A'
                                             AND det.cve_clie = cli.clave
                                             AND det.fecha_apli BETWEEN '" + clienteDetalle.FechaInicial + "' AND '" + clienteDetalle.FechaFinal + @"'
-                                            AND det.cve_clie IN(SELECT clie0" + RutaBD.Default.empresaEnUso + @".clave FROM clie0" + RutaBD.Default.empresaEnUso + @" WHERE clie0" + RutaBD.Default.empresaEnUso + @".status = 'A')
+                                            AND det.cve_clie IN(SELECT clie0" + RutaBD.Default.empresaEnUso + @".clave FROM clie0" + RutaBD.Default.empresaEnUso + @" WHERE clie0" + RutaBD.Default.empresaEnUso + @".status like '%" + statusCliente + @"%')
                                             AND det.no_factura = fac.cve_doc");
 
             if (String.IsNullOrEmpty(clienteDetalle.ClaveInicial))
@@ -181,37 +190,45 @@ namespace PRUEBA_CLIENTES1.Datos
         }
         private List<ClienteDetalleVO> ObtenerClientesCargosAbonos(DataRowCollection filasCargos, DataRowCollection filasCargosDetalle, DataRowCollection filasAbonos)
         {
+            Console.WriteLine("Run: ObtenerClientesCargosAbonos");
             clientesCargosAbonos = new List<ClienteDetalleVO>();
             ClienteDetalleVO nuevoCliente;
             for (int i = 0; i < filasCargos.Count; i++)
             {
-                string esContado = filasCargos[4].ToString();
-                if (esContado.Equals("N"))
+                Console.WriteLine("Run: Ciclo...FilasCargos " + i);
+
+                if(filasCargos.Count > 0)
                 {
-                    ClienteDetalleVO cliente = clientesCargosAbonos.Find(x => x.ClaveInicial == filasCargos[i][0].ToString());
-                    if (cliente != null)
+                    string esContado = filasCargos[i][4].ToString();
+                    if (esContado.Equals("N"))
                     {
-                        cliente.Cargos = (float.Parse(cliente.Cargos) + float.Parse(filasCargos[i][2].ToString())).ToString();
-                    }
-                    else
-                    {
-                        nuevoCliente = new ClienteDetalleVO
+                        ClienteDetalleVO cliente = clientesCargosAbonos.Find(x => x.ClaveInicial == filasCargos[i][0].ToString());
+                        if (cliente != null)
                         {
-                            ClaveInicial = filasCargos[i][0].ToString(),
-                            ClaveFinal = filasCargos[i][0].ToString(),
-                            Nombre = filasCargos[i][1].ToString(),
-                            Cargos = filasCargos[i][2].ToString(),
-                            Abono30 = "0",
-                            Abono60 = "0",
-                            Abono90 = "0",
-                            AbonoPlus90 = "0",
-                            FechaFinal = "0",
-                            FechaInicial = "0",
-                            Status = filasCargos[i][3].ToString()
-                        };
-                        clientesCargosAbonos.Add(nuevoCliente);
+                            cliente.Cargos = (float.Parse(cliente.Cargos) + float.Parse(filasCargos[i][2].ToString())).ToString();
+                        }
+                        else
+                        {
+                            nuevoCliente = new ClienteDetalleVO
+                            {
+                                ClaveInicial = filasCargos[i][0].ToString(),
+                                ClaveFinal = filasCargos[i][0].ToString(),
+                                Nombre = filasCargos[i][1].ToString(),
+                                Cargos = filasCargos[i][2].ToString(),
+                                Abono30 = "0",
+                                Abono60 = "0",
+                                Abono90 = "0",
+                                AbonoPlus90 = "0",
+                                FechaFinal = "0",
+                                FechaInicial = "0",
+                                Status = filasCargos[i][3].ToString()
+                            };
+                            clientesCargosAbonos.Add(nuevoCliente);
+                        }
                     }
                 }
+
+                
             }
                 
 
