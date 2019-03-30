@@ -41,7 +41,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pbCveFinCliente = new System.Windows.Forms.PictureBox();
             this.txtCveFinCliente = new System.Windows.Forms.TextBox();
+            this.pbCveIniCliente = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCveIniCliente = new System.Windows.Forms.TextBox();
@@ -65,17 +67,15 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.pbCveFinCliente = new System.Windows.Forms.PictureBox();
-            this.pbCveIniCliente = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCveFinCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCveIniCliente)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaldos)).BeginInit();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCveFinCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCveIniCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -115,7 +115,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Window;
+            this.label2.BackColor = System.Drawing.Color.White;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
@@ -124,6 +124,7 @@
             this.label2.Size = new System.Drawing.Size(79, 21);
             this.label2.TabIndex = 34;
             this.label2.Text = "ESTATUS";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // cmbEstatus
             // 
@@ -185,7 +186,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.Window;
+            this.label4.BackColor = System.Drawing.Color.White;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
@@ -242,7 +243,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Window;
+            this.label1.BackColor = System.Drawing.Color.White;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
@@ -251,6 +252,22 @@
             this.label1.Size = new System.Drawing.Size(74, 21);
             this.label1.TabIndex = 35;
             this.label1.Text = "CLIENTE";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pbCveFinCliente
+            // 
+            this.pbCveFinCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbCveFinCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pbCveFinCliente.Image = global::PRUEBA_CLIENTES1.Properties.Resources.Buscar;
+            this.pbCveFinCliente.Location = new System.Drawing.Point(214, 43);
+            this.pbCveFinCliente.Name = "pbCveFinCliente";
+            this.pbCveFinCliente.Size = new System.Drawing.Size(17, 19);
+            this.pbCveFinCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCveFinCliente.TabIndex = 35;
+            this.pbCveFinCliente.TabStop = false;
+            this.pbCveFinCliente.Click += new System.EventHandler(this.pbCveFinCliente_Click);
             // 
             // txtCveFinCliente
             // 
@@ -258,6 +275,21 @@
             this.txtCveFinCliente.Name = "txtCveFinCliente";
             this.txtCveFinCliente.Size = new System.Drawing.Size(56, 20);
             this.txtCveFinCliente.TabIndex = 34;
+            // 
+            // pbCveIniCliente
+            // 
+            this.pbCveIniCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbCveIniCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pbCveIniCliente.Image = global::PRUEBA_CLIENTES1.Properties.Resources.Buscar;
+            this.pbCveIniCliente.Location = new System.Drawing.Point(101, 42);
+            this.pbCveIniCliente.Name = "pbCveIniCliente";
+            this.pbCveIniCliente.Size = new System.Drawing.Size(17, 19);
+            this.pbCveIniCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCveIniCliente.TabIndex = 31;
+            this.pbCveIniCliente.TabStop = false;
+            this.pbCveIniCliente.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label10
             // 
@@ -386,6 +418,7 @@
             this.dgvSaldos.Location = new System.Drawing.Point(15, 38);
             this.dgvSaldos.Name = "dgvSaldos";
             this.dgvSaldos.ReadOnly = true;
+            this.dgvSaldos.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dgvSaldos.Size = new System.Drawing.Size(929, 313);
             this.dgvSaldos.TabIndex = 0;
             this.dgvSaldos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -483,36 +516,6 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
-            // pbCveFinCliente
-            // 
-            this.pbCveFinCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbCveFinCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pbCveFinCliente.Image = global::PRUEBA_CLIENTES1.Properties.Resources.Buscar;
-            this.pbCveFinCliente.Location = new System.Drawing.Point(214, 43);
-            this.pbCveFinCliente.Name = "pbCveFinCliente";
-            this.pbCveFinCliente.Size = new System.Drawing.Size(17, 19);
-            this.pbCveFinCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCveFinCliente.TabIndex = 35;
-            this.pbCveFinCliente.TabStop = false;
-            this.pbCveFinCliente.Click += new System.EventHandler(this.pbCveFinCliente_Click);
-            // 
-            // pbCveIniCliente
-            // 
-            this.pbCveIniCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbCveIniCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pbCveIniCliente.Image = global::PRUEBA_CLIENTES1.Properties.Resources.Buscar;
-            this.pbCveIniCliente.Location = new System.Drawing.Point(101, 42);
-            this.pbCveIniCliente.Name = "pbCveIniCliente";
-            this.pbCveIniCliente.Size = new System.Drawing.Size(17, 19);
-            this.pbCveIniCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCveIniCliente.TabIndex = 31;
-            this.pbCveIniCliente.TabStop = false;
-            this.pbCveIniCliente.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -534,12 +537,12 @@
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCveFinCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCveIniCliente)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaldos)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCveFinCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCveIniCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

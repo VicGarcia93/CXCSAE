@@ -141,5 +141,15 @@ namespace PRUEBA_CLIENTES1
             buscarCliente.ShowDialog();
             return buscarCliente.GetCveCliente();
         }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
