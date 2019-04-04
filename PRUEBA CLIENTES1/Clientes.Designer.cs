@@ -67,12 +67,8 @@
             this.tbl90 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-<<<<<<< HEAD
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-=======
->>>>>>> origin/master
+
+      
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -446,26 +442,26 @@
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(12, 563);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(963, 40);
-            this.panel3.TabIndex = 2;
+            //this.panel3.Location = new System.Drawing.Point(12, 563);
+          //  this.panel3.Name = "panel3";
+           // this.panel3.Size = new System.Drawing.Size(963, 40);
+         //   this.panel3.TabIndex = 2;
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 635);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1023, 22);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
+        //    this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+        //    this.toolStripStatusLabel1});
+         //   this.statusStrip1.Location = new System.Drawing.Point(0, 635);
+        //    this.statusStrip1.Name = "statusStrip1";
+        //    this.statusStrip1.Size = new System.Drawing.Size(1023, 22);
+        //    this.statusStrip1.TabIndex = 3;
+         //   this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
-            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+        //    this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+        //    this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+        //    this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
             // Column1
             // 
@@ -544,8 +540,7 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             this.Column4.Width = 81;
-            // 
-<<<<<<< HEAD
+
             // panel3
             // 
             this.panel3.Location = new System.Drawing.Point(12, 563);
@@ -568,9 +563,7 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
-            // 
-=======
->>>>>>> origin/master
+
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
