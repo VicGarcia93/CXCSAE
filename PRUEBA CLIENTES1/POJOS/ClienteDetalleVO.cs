@@ -20,6 +20,7 @@ namespace PRUEBA_CLIENTES1.POJOS
         public string Abono90 {get;set;}
         public string AbonoPlus90 {get;set;}
         public string Status { get; set;}
+        public string Saldo { get; set; }
     
     }
     
