@@ -31,7 +31,13 @@ namespace PRUEBA_CLIENTES1
             fechaInicial = "";
             fechaFinal = "";
             status = "";
+            Inicio();
         }
+        private void Inicio()
+        {
+            cmbEstatus.SelectedIndex = 1;
+        }
+
         private void HolaMundo()
         {
             MessageBox.Show("Hola Mundo");
@@ -50,8 +56,8 @@ namespace PRUEBA_CLIENTES1
 
             cveIniCliente = txtCveIniCliente.Text;
             cveFinCliente = txtCveFinCliente.Text;
-            fechaInicial = dateTimePicker2.Text;
-            fechaFinal = dateTimePicker3.Text;
+            fechaInicial = dateTimePicker3.Text;
+            fechaFinal = dateTimePicker2.Text;
             status = cmbEstatus.Text.Trim();
 
             cveIniCliente = ValidaCliente(cveIniCliente);
@@ -67,78 +73,34 @@ namespace PRUEBA_CLIENTES1
 
             clienteDetalleVO.Status = status.Substring(0, 1);
 
-
             //dgvSaldos.DataSource  = clienteDAO.GetClientesCargosAbonos(clienteDetalleVO);
             DataTable data = new DataTable();
             dgvSaldos.AutoGenerateColumns = false;
             
-            MessageBox.Show("cantidad: " + clienteDAO.GetClientesCargosAbonos(clienteDetalleVO).Count);
+            //MessageBox.Show("cantidad: " + clienteDAO.GetClientesCargosAbonos(clienteDetalleVO).Count);
             dgvSaldos.DataSource = clienteDAO.GetClientesCargosAbonos(clienteDetalleVO);
+            dgvSaldos.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvSaldos.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            
         }
         private String ValidaCliente(string cveCliente)
         {
         
             if (!cveCliente.Equals("MOSTR"))
             {
-                for (int i = cveCliente.Length; i < 10; i++)
+                if (!String.IsNullOrEmpty(cveCliente))
                 {
-                    cveCliente = " " + cveCliente; 
+                    for (int i = cveCliente.Length; i < 10; i++)
+                    {
+                        cveCliente = " " + cveCliente;
+                    }
                 }
+                
 
             }
             //Verificar si existe en la Base de datos
 
             return cveCliente;
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            BuscarSaldos();
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Clientes_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -149,47 +111,12 @@ namespace PRUEBA_CLIENTES1
             testForm.Show();
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void Clientes_FormClosed(object sender, FormClosedEventArgs e)
         {
             Form1 form1 = Form1.GetInstance();
             form1.Close();
         }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            txtCveIniCliente.Text = GetClaveCliente();
-        }
-
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+ 
         private void pbCveFinCliente_Click(object sender, EventArgs e)
         {
             txtCveFinCliente.Text = GetClaveCliente();
@@ -202,14 +129,19 @@ namespace PRUEBA_CLIENTES1
             return buscarCliente.GetCveCliente();
         }
 
-        private void label2_Click_1(object sender, EventArgs e)
+        private void pbCveIniCliente_Click(object sender, EventArgs e)
         {
-          
+            txtCveIniCliente.Text = GetClaveCliente();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void pbCveFinCliente_Click_1(object sender, EventArgs e)
         {
-           
+            txtCveFinCliente.Text = GetClaveCliente();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            BuscarSaldos();
         }
     }
 }
