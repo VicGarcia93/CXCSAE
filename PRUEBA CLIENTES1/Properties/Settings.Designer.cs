@@ -25,7 +25,7 @@ namespace PRUEBA_CLIENTES1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\\\Users\\\\USUARIO1\\\\Documents\\\\BD\\\\SAE70EMPRE01.FDB")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\\\Users\\\\Usuario 069\\\\BD\\\\SAE70EMPRE01.FDB")]
         public string bDLan1 {
             get {
                 return ((string)(this["bDLan1"]));
@@ -37,7 +37,7 @@ namespace PRUEBA_CLIENTES1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\\\Users\\\\USUARIO1\\\\Documents\\\\BD\\\\SAE70EMPRE02.FDB")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\\\Users\\\\Usuario 069\\\\BD\\\\SAE70EMPRE02.FDB")]
         public string bDFerre {
             get {
                 return ((string)(this["bDFerre"]));
@@ -49,7 +49,7 @@ namespace PRUEBA_CLIENTES1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\\\Users\\\\USUARIO1\\\\Documents\\\\BD\\\\SAE70EMPRE03.FDB")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\\\Users\\\\Usuario 069\\\\BD\\\\SAE70EMPRE03.FDB")]
         public string bDLlantasM {
             get {
                 return ((string)(this["bDLlantasM"]));
@@ -61,7 +61,7 @@ namespace PRUEBA_CLIENTES1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\\\Users\\\\USUARIO1\\\\Documents\\\\BD\\\\SAE70EMPRE04.FDB")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\\\Users\\\\Usuario 069\\\\BD\\\\SAE70EMPRE04.FDB")]
         public string bDLlantasE {
             get {
                 return ((string)(this["bDLlantasE"]));
@@ -73,7 +73,7 @@ namespace PRUEBA_CLIENTES1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\\\Users\\\\USUARIO1\\\\Documents\\\\BD\\\\SAE70EMPRE05.FDB")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\\\Users\\\\Usuario 069\\\\BD\\\\SAE70EMPRE05.FDB")]
         public string bDLlantasP {
             get {
                 return ((string)(this["bDLlantasP"]));
