@@ -36,17 +36,19 @@ namespace PRUEBA_CLIENTES1
         private void Inicio()
         {
             cmbEstatus.SelectedIndex = 1;
+            toolStripStatusLabel1.Text = FechaActual().Date.ToLongDateString();
         }
 
         private void HolaMundo()
         {
             MessageBox.Show("Hola Mundo");
         }
-        private void FechaActual()
+        private DateTime FechaActual()
         {
             DateTime dateTime;
             dateTime = DateTime.Now;
-            toolStripStatusLabel1.Text =  dateTime.Date.ToLongDateString();
+            return dateTime;
+           // toolStripStatusLabel1.Text =  dateTime.Date.ToLongDateString();
         }
         private void BuscarSaldos()
         {
@@ -142,6 +144,358 @@ namespace PRUEBA_CLIENTES1
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             BuscarSaldos();
+        }
+
+        private void dgvSaldos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+
+        }
+
+        private void cmbFecha_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cmbFecha.SelectedIndex)
+            {
+                case 0://NO SELECCIONAR FECHAS
+                    dateTimePicker3.Enabled = false;
+                    dateTimePicker2.Enabled = false;
+                    break;
+
+                case 1://FECHAS SELECCIONADAS
+                    dateTimePicker3.Enabled = true;
+                    dateTimePicker2.Enabled = true;
+                    break;
+
+                case 2://HOY
+
+                    FechaActual();
+                    DateTime hoy = FechaActual().Subtract(TimeSpan.FromDays(0));
+
+                    dateTimePicker3.Text = hoy.ToShortDateString();
+                    dateTimePicker2.Text = hoy.ToShortDateString();
+
+                    break;
+
+                case 3://AYER
+
+                    FechaActual();
+                    DateTime ayer = FechaActual().Subtract(TimeSpan.FromDays(1));
+
+                    dateTimePicker3.Text = ayer.ToShortDateString();
+                    dateTimePicker2.Text = ayer.ToShortDateString();
+
+                    break;
+
+                case 4:
+                    FechaActual();
+                    DateTime estasemana = FechaActual().Subtract(TimeSpan.FromDays(7));
+
+                    dateTimePicker3.Text = estasemana.ToShortDateString();
+                    dateTimePicker2.Text = FechaActual().ToShortDateString();
+
+                    break;
+
+                case 5://ESTE MES 
+
+                   
+                    string fechames = FechaActual().ToShortDateString().Substring(4,1);
+                    string fechayear =FechaActual().ToShortDateString().Substring(6,4);
+
+
+                   int daym = System.DateTime.DaysInMonth(int.Parse(fechayear), int.Parse(fechames));
+                    Console.WriteLine(daym);
+
+          
+                    string sini = "01" + FechaActual().ToShortDateString().Substring(2, 8);
+                    string tfin = daym + FechaActual().ToShortDateString().Substring(2, 8);
+
+                    dateTimePicker3.Text = sini;
+                    dateTimePicker2.Text = tfin;
+
+                    break;
+
+
+                case 6://MES ANTERIOR
+                    string fechames1 = FechaActual().ToShortDateString().Substring(4, 1);
+                    string fechayear1 = FechaActual().ToShortDateString().Substring(6, 4);
+
+                    int fechamesr = int.Parse(fechames1);
+                    int yearant;
+                    int mesant;
+                    int dayma;
+                    int mesant1;
+
+                    if (fechamesr ==1)
+                    {
+                        mesant = 12;
+                       yearant = int.Parse(fechayear1) - 1;
+
+                        dayma = System.DateTime.DaysInMonth(yearant,mesant);
+                        Console.WriteLine(dayma);
+
+                        string sinic = "01" +"/"+mesant+"/"+yearant;
+                        string tfinc = dayma+"/" + mesant + "/" + yearant;
+
+                        dateTimePicker3.Text = sinic;
+                        dateTimePicker2.Text = tfinc;
+                    }
+                    else
+                    {
+                        mesant1 = int.Parse(fechames1) - 1;
+                        yearant = int.Parse(fechayear1);
+
+                        dayma = System.DateTime.DaysInMonth(yearant, mesant1);
+                        Console.WriteLine(dayma);
+
+                        string sinic = "01" + "/" + mesant1 + "/" + yearant;
+                        string tfinc = dayma + "/" + mesant1 + "/" + yearant;
+
+                        dateTimePicker3.Text = sinic;
+                        dateTimePicker2.Text = tfinc;
+                    }
+              
+                    break;
+
+                case 7://ESTE AÑO 
+
+                    string yearactual = FechaActual().ToShortDateString().Substring(6, 4);
+
+                    string sinict = "01" + "/" + "01" + "/" + yearactual;
+                    string tyearfi = "31" + "/" + "12"+ "/" + yearactual;
+
+                    dateTimePicker3.Text = sinict;
+                    dateTimePicker2.Text = tyearfi;
+
+                    break;
+
+                case 8://ENERO
+
+                     yearactual = FechaActual().ToShortDateString().Substring(6, 4);
+                   int mesene =1;
+
+                    dayma = System.DateTime.DaysInMonth(int.Parse(yearactual), mesene);
+                    Console.WriteLine(dayma);
+
+                    string eneini = "01" + "/" + "01" + "/" + yearactual;
+                    string enefin = dayma + "/" + "01" + "/" + yearactual;
+
+                    dateTimePicker3.Text = eneini;
+                    dateTimePicker2.Text = enefin;
+
+
+                    break;
+
+                case 9://FEBRERO
+
+                    yearactual = FechaActual().ToShortDateString().Substring(6, 4);
+                    int mesfeb = 2;
+
+                    dayma = System.DateTime.DaysInMonth(int.Parse(yearactual), mesfeb);
+                    Console.WriteLine(dayma);
+
+                    string febini = "01" + "/" + "02" + "/" + yearactual;
+                    string febfin = dayma + "/" + "02" + "/" + yearactual;
+
+                    dateTimePicker3.Text = febini;
+                    dateTimePicker2.Text = febfin;
+
+
+                    break;
+
+                case 10://MARZO
+
+                    yearactual = FechaActual().ToShortDateString().Substring(6, 4);
+                    int mesmar = 3;
+
+                    dayma = System.DateTime.DaysInMonth(int.Parse(yearactual), mesmar);
+                    Console.WriteLine(dayma);
+
+                    string marini = "01" + "/" + "03" + "/" + yearactual;
+                    string marfin = dayma + "/" + "03" + "/" + yearactual;
+
+                    dateTimePicker3.Text = marini;
+                    dateTimePicker2.Text = marfin;
+
+
+                    break;
+
+                case 11://ABRIL
+
+                    yearactual = FechaActual().ToShortDateString().Substring(6, 4);
+                    int mesabr = 4;
+
+                    dayma = System.DateTime.DaysInMonth(int.Parse(yearactual), mesabr);
+                    Console.WriteLine(dayma);
+
+                    string abrini = "01" + "/" + "04" + "/" + yearactual;
+                    string abrfin = dayma + "/" + "04" + "/" + yearactual;
+
+                    dateTimePicker3.Text = abrini;
+                    dateTimePicker2.Text = abrfin;
+
+
+                    break;
+
+                case 12://MAYO
+
+                    yearactual = FechaActual().ToShortDateString().Substring(6, 4);
+                    int mesmay = 5;
+
+                    dayma = System.DateTime.DaysInMonth(int.Parse(yearactual), mesmay);
+                    Console.WriteLine(dayma);
+
+                    string mayini = "01" + "/" + "05" + "/" + yearactual;
+                    string mayfin = dayma + "/" + "05" + "/" + yearactual;
+
+                    dateTimePicker3.Text = mayini;
+                    dateTimePicker2.Text = mayfin;
+
+
+                    break;
+
+                case 13://JUNIO
+
+                    yearactual = FechaActual().ToShortDateString().Substring(6, 4);
+                    int mesjun = 6;
+
+                    dayma = System.DateTime.DaysInMonth(int.Parse(yearactual), mesjun);
+                    Console.WriteLine(dayma);
+
+                    string junini = "01" + "/" + "06" + "/" + yearactual;
+                    string junfin = dayma + "/" + "06" + "/" + yearactual;
+
+                    dateTimePicker3.Text = junini;
+                    dateTimePicker2.Text = junfin;
+
+
+                    break;
+
+                case 14://JULIO
+
+                    yearactual = FechaActual().ToShortDateString().Substring(6, 4);
+                     int mesjul = 7;
+
+                    dayma = System.DateTime.DaysInMonth(int.Parse(yearactual), mesjul);
+                    Console.WriteLine(dayma);
+
+                    string julini = "01" + "/" + "07" + "/" + yearactual;
+                    string julfin = dayma + "/" + "07" + "/" + yearactual;
+
+                    dateTimePicker3.Text = julini;
+                    dateTimePicker2.Text = julfin;
+
+
+                    break;
+
+                case 15://AGOSTO
+
+                    yearactual = FechaActual().ToShortDateString().Substring(6, 4);
+                    int mesago = 8;
+
+                    dayma = System.DateTime.DaysInMonth(int.Parse(yearactual), mesago);
+                    Console.WriteLine(dayma);
+
+                    string agoini = "01" + "/" + "08" + "/" + yearactual;
+                    string agofin = dayma + "/" + "08" + "/" + yearactual;
+
+                    dateTimePicker3.Text = agoini;
+                    dateTimePicker2.Text = agofin;
+
+
+                    break;
+
+                case 16://SEPTIEMBRE
+
+                    yearactual = FechaActual().ToShortDateString().Substring(6, 4);
+                    int messep = 9;
+
+                    dayma = System.DateTime.DaysInMonth(int.Parse(yearactual), messep);
+                    Console.WriteLine(dayma);
+
+                    string sepini = "01" + "/" + "09" + "/" + yearactual;
+                    string sepfin = dayma + "/" + "09" + "/" + yearactual;
+
+                    dateTimePicker3.Text = sepini;
+                    dateTimePicker2.Text = sepfin;
+
+
+                    break;
+
+                case 17://OCTUBRE
+
+                    yearactual = FechaActual().ToShortDateString().Substring(6, 4);
+                    int mesoct = 10;
+
+                    dayma = System.DateTime.DaysInMonth(int.Parse(yearactual), mesoct);
+                    Console.WriteLine(dayma);
+
+                    string octini = "01" + "/" + "10" + "/" + yearactual;
+                    string octfin = dayma + "/" + "10" + "/" + yearactual;
+
+                    dateTimePicker3.Text = octini;
+                    dateTimePicker2.Text = octfin;
+
+
+                    break;
+
+                case 18://NOVIEMBRE
+
+                    yearactual = FechaActual().ToShortDateString().Substring(6, 4);
+                    int mesnov = 11;
+
+                    dayma = System.DateTime.DaysInMonth(int.Parse(yearactual), mesnov);
+                    Console.WriteLine(dayma);
+
+                    string novini = "01" + "/" + "11" + "/" + yearactual;
+                    string novfin = dayma + "/" + "11" + "/" + yearactual;
+
+                    dateTimePicker3.Text = novini;
+                    dateTimePicker2.Text = novfin;
+
+
+                    break;
+
+
+                case 19://DICIEMBRE
+
+                    yearactual = FechaActual().ToShortDateString().Substring(6, 4);
+                    int mesdic = 12;
+
+                    dayma = System.DateTime.DaysInMonth(int.Parse(yearactual), mesdic);
+                    Console.WriteLine(dayma);
+
+                    string dicini = "01" + "/" + "12" + "/" + yearactual;
+                    string dicfin = dayma + "/" + "12" + "/" + yearactual;
+
+                    dateTimePicker3.Text = dicini;
+                    dateTimePicker2.Text = dicfin;
+
+
+                    break;
+
+
+                   case 20://AÑO ANTERIOR
+                    yearactual = FechaActual().ToShortDateString().Substring(6, 4);
+                    yearant = int.Parse(yearactual) - 1;
+
+                sinict = "01" + "/" + "01" + "/" + yearant;
+                   tyearfi = "31" + "/" + "12" + "/" + yearant;
+
+                    dateTimePicker3.Text = sinict;
+                    dateTimePicker2.Text = tyearfi;
+
+                    break;
+
+            }
+
+
+
+        }
+
+        private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -55,9 +55,6 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvSaldos = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCargos = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +64,9 @@
             this.tbl90 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -160,13 +160,28 @@
             "Fechas seleccionadas",
             "Hoy ",
             "Ayer",
-            "Este semana",
+            "Esta semana",
             "Este mes",
-            "Mes anterior"});
+            "Mes anterior",
+            "Este año ",
+            "Enero",
+            "Febrero",
+            "Marzo ",
+            "Abril ",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto ",
+            "Septiembre ",
+            "Octubre ",
+            "Noviembre",
+            "Diciembre",
+            "Año anterior"});
             this.cmbFecha.Location = new System.Drawing.Point(79, 3);
             this.cmbFecha.Name = "cmbFecha";
             this.cmbFecha.Size = new System.Drawing.Size(126, 21);
             this.cmbFecha.TabIndex = 36;
+            this.cmbFecha.SelectedIndexChanged += new System.EventHandler(this.cmbFecha_SelectedIndexChanged);
             // 
             // dateTimePicker3
             // 
@@ -177,6 +192,7 @@
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(91, 20);
             this.dateTimePicker3.TabIndex = 38;
+            this.dateTimePicker3.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
             // 
             // label4
             // 
@@ -254,6 +270,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbCveFinCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pbCveFinCliente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbCveFinCliente.Image = global::PRUEBA_CLIENTES1.Properties.Resources.Buscar;
             this.pbCveFinCliente.Location = new System.Drawing.Point(214, 43);
             this.pbCveFinCliente.Name = "pbCveFinCliente";
@@ -276,6 +293,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbCveIniCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pbCveIniCliente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbCveIniCliente.Image = global::PRUEBA_CLIENTES1.Properties.Resources.Buscar;
             this.pbCveIniCliente.Location = new System.Drawing.Point(101, 42);
             this.pbCveIniCliente.Name = "pbCveIniCliente";
@@ -327,7 +345,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkRed;
-            this.label3.Location = new System.Drawing.Point(313, 7);
+            this.label3.Location = new System.Drawing.Point(462, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(373, 41);
             this.label3.TabIndex = 5;
@@ -337,13 +355,14 @@
             // LblEmpresa
             // 
             this.LblEmpresa.AutoSize = true;
-            this.LblEmpresa.BackColor = System.Drawing.SystemColors.Window;
+            this.LblEmpresa.BackColor = System.Drawing.Color.GhostWhite;
             this.LblEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LblEmpresa.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEmpresa.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.LblEmpresa.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblEmpresa.ForeColor = System.Drawing.Color.Black;
-            this.LblEmpresa.Location = new System.Drawing.Point(11, 13);
+            this.LblEmpresa.Location = new System.Drawing.Point(11, 11);
             this.LblEmpresa.Name = "LblEmpresa";
-            this.LblEmpresa.Size = new System.Drawing.Size(67, 17);
+            this.LblEmpresa.Size = new System.Drawing.Size(84, 21);
             this.LblEmpresa.TabIndex = 10;
             this.LblEmpresa.Text = "EMPRESA";
             // 
@@ -356,9 +375,9 @@
             "VECA LLANTAS Y SERVICIOS SA DE CV (MATRIZ)",
             "VECA LLANTAS Y SERVICIOS SA DE CV (EJIDAL)",
             "VECA LLANTAS Y SERVICIOS SA DE CV (POZA RICA)"});
-            this.CboEmpresa.Location = new System.Drawing.Point(82, 11);
+            this.CboEmpresa.Location = new System.Drawing.Point(101, 12);
             this.CboEmpresa.Name = "CboEmpresa";
-            this.CboEmpresa.Size = new System.Drawing.Size(189, 21);
+            this.CboEmpresa.Size = new System.Drawing.Size(267, 21);
             this.CboEmpresa.TabIndex = 8;
             // 
             // btnBuscar
@@ -418,28 +437,7 @@
             this.dgvSaldos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvSaldos.Size = new System.Drawing.Size(929, 313);
             this.dgvSaldos.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(12, 563);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(963, 40);
-            this.panel3.TabIndex = 2;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 635);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1023, 22);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            this.dgvSaldos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSaldos_CellContentClick);
             // 
             // Column1
             // 
@@ -513,6 +511,28 @@
             this.Column4.ReadOnly = true;
             this.Column4.Width = 90;
             // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(12, 563);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(963, 40);
+            this.panel3.TabIndex = 2;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 635);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1023, 22);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -554,7 +574,6 @@
         private System.Windows.Forms.DataGridView dgvSaldos;
         private System.Windows.Forms.ComboBox CboEmpresa;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.Label LblEmpresa;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
@@ -584,6 +603,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tbl90;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Label LblEmpresa;
     }
 }
 

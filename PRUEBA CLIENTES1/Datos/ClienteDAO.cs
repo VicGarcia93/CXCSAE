@@ -320,17 +320,22 @@ namespace PRUEBA_CLIENTES1.Datos
 
             return clientesCargosAbonos;
         }
-
+        //Recibe como parámetro fecha de aplicacíón del abono y fecha de documento factura
         private int DiferenciaFechasAbono(string fecha_apli,string fecha_doc)
         {
-            string[] fecha1 = fecha_apli.Substring(0, 10).Split('/');
+            //Se recorta la fecha de 00/00/0000 00:00 xx a 00/00/0000 mediante Substring() y se separa en 3 cadenas con el método Split() 
+            //Cuando encuentra una diagonal '/' se corta la cadena, el resultado se guarda en un arreglo.
+            string[] fecha1 = fecha_apli.Substring(0, 10).Split('/'); 
             string[] fecha2 = fecha_doc.Substring(0,10).Split('/');
+
+            //Se crea un DateTime que recibe como parámetro el año, mes y día. Una fecha o instante de tiempo
             DateTime fechaApli = new DateTime(int.Parse(fecha1[2]), int.Parse(fecha1[1]), int.Parse(fecha1[0]));
             DateTime fechaDoc = new DateTime(int.Parse(fecha2[2]), int.Parse(fecha2[1]), int.Parse(fecha2[0]));
-
+            // Mediante TimeSpan se obtiene un intervalo de tiempo, que es la diferencia entre la fecha de aplicación y la de la factura
             TimeSpan difDias = fechaApli - fechaDoc;
+            //Se obtiene el número de dias del intervalo
             int numDias = difDias.Days;
-            
+            //'return' regresa el número de días
             return numDias;
         }
 
