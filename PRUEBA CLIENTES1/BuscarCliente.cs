@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PRUEBA_CLIENTES1.Datos;
 using PRUEBA_CLIENTES1.POJOS;
+using PRUEBA_CLIENTES1.Entidades;
 
 namespace PRUEBA_CLIENTES1
 {
@@ -35,7 +36,7 @@ namespace PRUEBA_CLIENTES1
 
             if (cmbCategoria.Text.Equals("Clave"))
             {
-                id = txtBuscar.Text;
+                id = Validaciones.GetInstance().ValidaCliente(txtBuscar.Text);
             }
             else if (cmbCategoria.Text.Equals("Nombre"))
             {

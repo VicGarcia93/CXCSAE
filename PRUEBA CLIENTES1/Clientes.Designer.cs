@@ -369,12 +369,6 @@
             // CboEmpresa
             // 
             this.CboEmpresa.FormattingEnabled = true;
-            this.CboEmpresa.Items.AddRange(new object[] {
-            "LAN SERVICIOS Y COMERCIO SAPI DE CV (1)",
-            "LAN SERVICIOS Y COMERCIO SAPI DE CV (2)",
-            "VECA LLANTAS Y SERVICIOS SA DE CV (MATRIZ)",
-            "VECA LLANTAS Y SERVICIOS SA DE CV (EJIDAL)",
-            "VECA LLANTAS Y SERVICIOS SA DE CV (POZA RICA)"});
             this.CboEmpresa.Location = new System.Drawing.Point(101, 12);
             this.CboEmpresa.Name = "CboEmpresa";
             this.CboEmpresa.Size = new System.Drawing.Size(267, 21);

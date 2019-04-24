@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PRUEBA_CLIENTES1.Datos;
 using PRUEBA_CLIENTES1.POJOS;
+using PRUEBA_CLIENTES1.Entidades;
 
 namespace PRUEBA_CLIENTES1
 {
@@ -24,6 +25,7 @@ namespace PRUEBA_CLIENTES1
         public Clientes()
         {
             InitializeComponent();
+            CboEmpresa.DataSource = LeerEmpresasCSV.GetInstance().GetEmpresas();
             CboEmpresa.SelectedIndex = int.Parse(RutaBD.Default.empresaEnUso) - 1;
             FechaActual();
             cveIniCliente = "";
@@ -62,8 +64,8 @@ namespace PRUEBA_CLIENTES1
             fechaFinal = dateTimePicker2.Text;
             status = cmbEstatus.Text.Trim();
 
-            cveIniCliente = ValidaCliente(cveIniCliente);
-            cveFinCliente = ValidaCliente(cveFinCliente);
+            cveIniCliente = Validaciones.GetInstance().ValidaCliente(cveIniCliente);
+            cveFinCliente = Validaciones.GetInstance().ValidaCliente(cveFinCliente);
 
 
             clienteDetalleVO.ClaveInicial = cveIniCliente;
@@ -85,25 +87,7 @@ namespace PRUEBA_CLIENTES1
             dgvSaldos.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             
         }
-        private String ValidaCliente(string cveCliente)
-        {
         
-            if (!cveCliente.Equals("MOSTR"))
-            {
-                if (!String.IsNullOrEmpty(cveCliente))
-                {
-                    for (int i = cveCliente.Length; i < 10; i++)
-                    {
-                        cveCliente = " " + cveCliente;
-                    }
-                }
-                
-
-            }
-            //Verificar si existe en la Base de datos
-
-            return cveCliente;
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {

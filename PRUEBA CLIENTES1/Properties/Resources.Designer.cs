@@ -103,6 +103,16 @@ namespace PRUEBA_CLIENTES1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap settings_black_18dp {
+            get {
+                object obj = ResourceManager.GetObject("settings_black_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap veca {
             get {
                 object obj = ResourceManager.GetObject("veca", resourceCulture);
