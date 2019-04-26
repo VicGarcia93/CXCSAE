@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,7 +48,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCveIniCliente = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.LblEmpresa = new System.Windows.Forms.Label();
             this.CboEmpresa = new System.Windows.Forms.ComboBox();
@@ -89,7 +88,6 @@
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.LblEmpresa);
             this.panel1.Controls.Add(this.CboEmpresa);
@@ -135,7 +133,7 @@
             this.cmbEstatus.Location = new System.Drawing.Point(81, 34);
             this.cmbEstatus.Name = "cmbEstatus";
             this.cmbEstatus.Size = new System.Drawing.Size(128, 21);
-            this.cmbEstatus.TabIndex = 35;
+            this.cmbEstatus.TabIndex = 6;
             // 
             // panel5
             // 
@@ -180,7 +178,7 @@
             this.cmbFecha.Location = new System.Drawing.Point(79, 3);
             this.cmbFecha.Name = "cmbFecha";
             this.cmbFecha.Size = new System.Drawing.Size(126, 21);
-            this.cmbFecha.TabIndex = 36;
+            this.cmbFecha.TabIndex = 3;
             this.cmbFecha.SelectedIndexChanged += new System.EventHandler(this.cmbFecha_SelectedIndexChanged);
             // 
             // dateTimePicker3
@@ -191,8 +189,7 @@
             this.dateTimePicker3.Location = new System.Drawing.Point(114, 30);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(91, 20);
-            this.dateTimePicker3.TabIndex = 38;
-            this.dateTimePicker3.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
+            this.dateTimePicker3.TabIndex = 4;
             // 
             // label4
             // 
@@ -224,7 +221,7 @@
             this.dateTimePicker2.Location = new System.Drawing.Point(114, 53);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(91, 20);
-            this.dateTimePicker2.TabIndex = 36;
+            this.dateTimePicker2.TabIndex = 5;
             // 
             // label5
             // 
@@ -272,9 +269,9 @@
             this.pbCveFinCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pbCveFinCliente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbCveFinCliente.Image = global::PRUEBA_CLIENTES1.Properties.Resources.Buscar;
-            this.pbCveFinCliente.Location = new System.Drawing.Point(214, 43);
+            this.pbCveFinCliente.Location = new System.Drawing.Point(230, 42);
             this.pbCveFinCliente.Name = "pbCveFinCliente";
-            this.pbCveFinCliente.Size = new System.Drawing.Size(17, 19);
+            this.pbCveFinCliente.Size = new System.Drawing.Size(17, 20);
             this.pbCveFinCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbCveFinCliente.TabIndex = 35;
             this.pbCveFinCliente.TabStop = false;
@@ -285,7 +282,9 @@
             this.txtCveFinCliente.Location = new System.Drawing.Point(174, 42);
             this.txtCveFinCliente.Name = "txtCveFinCliente";
             this.txtCveFinCliente.Size = new System.Drawing.Size(56, 20);
-            this.txtCveFinCliente.TabIndex = 34;
+            this.txtCveFinCliente.TabIndex = 2;
+            this.txtCveFinCliente.TabStop = false;
+            this.txtCveFinCliente.Leave += new System.EventHandler(this.txtCveFinCliente_Leave);
             // 
             // pbCveIniCliente
             // 
@@ -295,9 +294,9 @@
             this.pbCveIniCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pbCveIniCliente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbCveIniCliente.Image = global::PRUEBA_CLIENTES1.Properties.Resources.Buscar;
-            this.pbCveIniCliente.Location = new System.Drawing.Point(101, 42);
+            this.pbCveIniCliente.Location = new System.Drawing.Point(116, 41);
             this.pbCveIniCliente.Name = "pbCveIniCliente";
-            this.pbCveIniCliente.Size = new System.Drawing.Size(17, 19);
+            this.pbCveIniCliente.Size = new System.Drawing.Size(17, 20);
             this.pbCveIniCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbCveIniCliente.TabIndex = 31;
             this.pbCveIniCliente.TabStop = false;
@@ -326,18 +325,10 @@
             this.txtCveIniCliente.Location = new System.Drawing.Point(61, 41);
             this.txtCveIniCliente.Name = "txtCveIniCliente";
             this.txtCveIniCliente.Size = new System.Drawing.Size(56, 20);
-            this.txtCveIniCliente.TabIndex = 27;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(874, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(59, 33);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Testing";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtCveIniCliente.TabIndex = 1;
+            this.txtCveIniCliente.TabStop = false;
+            this.txtCveIniCliente.TextChanged += new System.EventHandler(this.txtCveIniCliente_TextChanged);
+            this.txtCveIniCliente.Leave += new System.EventHandler(this.txtCveIniCliente_Leave);
             // 
             // label3
             // 
@@ -345,7 +336,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkRed;
-            this.label3.Location = new System.Drawing.Point(462, 11);
+            this.label3.Location = new System.Drawing.Point(380, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(373, 41);
             this.label3.TabIndex = 5;
@@ -373,6 +364,7 @@
             this.CboEmpresa.Name = "CboEmpresa";
             this.CboEmpresa.Size = new System.Drawing.Size(267, 21);
             this.CboEmpresa.TabIndex = 8;
+            this.CboEmpresa.SelectedIndexChanged += new System.EventHandler(this.CboEmpresa_SelectedIndexChanged);
             // 
             // btnBuscar
             // 
@@ -405,14 +397,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSaldos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSaldos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSaldos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSaldos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSaldos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -570,7 +562,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pbCveIniCliente;
         private System.Windows.Forms.Label label10;

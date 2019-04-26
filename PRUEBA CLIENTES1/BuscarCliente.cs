@@ -37,6 +37,7 @@ namespace PRUEBA_CLIENTES1
             if (cmbCategoria.Text.Equals("Clave"))
             {
                 id = Validaciones.GetInstance().ValidaCliente(txtBuscar.Text);
+                Console.WriteLine("ID: " + id);
             }
             else if (cmbCategoria.Text.Equals("Nombre"))
             {
@@ -62,6 +63,20 @@ namespace PRUEBA_CLIENTES1
         {
             cveCliente = dgvClientes.Rows[e.RowIndex].Cells[0].Value.ToString();
             this.Close();
+        }
+
+        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                BuscarClientes();
+            }
+        }
+
+        private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtBuscar.Text = "";
+
         }
     }
 }

@@ -42,5 +42,21 @@ namespace PRUEBA_CLIENTES1.Entidades
 
             return cveCliente;
         }
+
+        public bool ValidaClavesClientes(string cveInicialCliente, string cveFinalCliente)
+        {
+            if (!String.IsNullOrEmpty(cveFinalCliente))
+            {
+                if (!String.IsNullOrEmpty(cveInicialCliente))
+                {
+                    if (int.Parse(cveInicialCliente) > int.Parse(cveFinalCliente))
+                    {
+                        return false;
+                    }
+                }
+
+            }
+            return true;
+        }
     }
 }

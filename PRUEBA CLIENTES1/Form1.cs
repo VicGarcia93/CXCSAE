@@ -72,30 +72,9 @@ namespace PRUEBA_CLIENTES1
         private void Form1_Load(object sender, EventArgs e)
         {
             cboempresa.DataSource = LeerEmpresasCSV.GetInstance().GetEmpresas();
-            GenerarTXT();
+          
         }
-        // para crear el archivo
-        void GenerarTXT()
-        {
-            string rutaCompleta = @" //7.1.1.251//dacaspel//Sistemas Aspel//SAE7.00//BD//mi archivo.txt";
-            string texto = "HOLA MUNDO ";
-
-            using (StreamWriter mylogs = File.AppendText(rutaCompleta))         //se crea el archivo
-            {
-
-                //se adiciona alguna información y la fecha
-
-
-                DateTime dateTime = new DateTime();
-                dateTime = DateTime.Now;
-                string strDate = Convert.ToDateTime(dateTime).ToString("yyMMdd");
-
-                mylogs.WriteLine(texto + strDate);
-
-                mylogs.Close();
-
-
-            }
-        }
+       
+       
     }
 }

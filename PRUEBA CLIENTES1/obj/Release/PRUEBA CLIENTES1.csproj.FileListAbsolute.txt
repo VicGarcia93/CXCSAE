@@ -24,3 +24,4 @@ C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\
 C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Release\PRUEBA CLIENTES1.csproj.CopyComplete
 C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Release\PRUEBA CLIENTES1.exe
 C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Release\PRUEBA CLIENTES1.pdb
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Release\PRUEBA CLIENTES1.csprojAssemblyReference.cache

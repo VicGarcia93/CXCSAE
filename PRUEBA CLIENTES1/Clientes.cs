@@ -25,8 +25,6 @@ namespace PRUEBA_CLIENTES1
         public Clientes()
         {
             InitializeComponent();
-            CboEmpresa.DataSource = LeerEmpresasCSV.GetInstance().GetEmpresas();
-            CboEmpresa.SelectedIndex = int.Parse(RutaBD.Default.empresaEnUso) - 1;
             FechaActual();
             cveIniCliente = "";
             cveFinCliente = "";
@@ -37,8 +35,12 @@ namespace PRUEBA_CLIENTES1
         }
         private void Inicio()
         {
+            CboEmpresa.DataSource = LeerEmpresasCSV.GetInstance().GetEmpresas();
+            CboEmpresa.SelectedIndex = int.Parse(RutaBD.Default.empresaEnUso) - 1;
             cmbEstatus.SelectedIndex = 1;
+            cmbFecha.SelectedIndex = 1;
             toolStripStatusLabel1.Text = FechaActual().Date.ToLongDateString();
+            
         }
 
         private void HolaMundo()
@@ -127,15 +129,11 @@ namespace PRUEBA_CLIENTES1
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             BuscarSaldos();
+            Cursor.Current = Cursors.Default;
         }
 
-        private void dgvSaldos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-
-
-        }
 
         private void cmbFecha_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -473,13 +471,46 @@ namespace PRUEBA_CLIENTES1
 
             }
 
+        }
 
+        private void LimpiarCampos()
+        {
+            txtCveIniCliente.Text = "";
+            txtCveFinCliente.Text = "";
+            cmbFecha.SelectedIndex = 1;
+            cmbEstatus.SelectedIndex = 1;
+            dgvSaldos.DataSource = null;
 
         }
 
-        private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
+        private void CboEmpresa_SelectedIndexChanged(object sender, EventArgs e)
         {
+            RutaBD.Default.empresaEnUso = (CboEmpresa.SelectedIndex + 1).ToString();
+            RutaBD.Default.Save();
+            LimpiarCampos();
+        }
 
+       
+        private void txtCveIniCliente_Leave(object sender, EventArgs e)
+        {
+            if (!Validaciones.GetInstance().ValidaClavesClientes(txtCveIniCliente.Text, txtCveFinCliente.Text))
+            {
+                MessageBox.Show(this, "La clave inicial no debe ser mayor que la final.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCveIniCliente.Focus();
+                txtCveIniCliente.SelectAll();
+            }
+            
+        }
+
+        private void txtCveFinCliente_Leave(object sender, EventArgs e)
+        {
+            if (!Validaciones.GetInstance().ValidaClavesClientes(txtCveIniCliente.Text, txtCveFinCliente.Text))
+            {
+                MessageBox.Show(this, "La clave final no debe ser menor que la inicial.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCveFinCliente.Focus();
+                txtCveFinCliente.SelectAll();
+            }
+            
         }
     }
 }

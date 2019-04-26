@@ -28,7 +28,11 @@ namespace PRUEBA_CLIENTES1
           dgvConfiguracionBD.DataSource = LeerEmpresasCSV.GetInstance().GetEmpresasAll();
 
         }
-        
-        
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            dgvConfiguracionBD.ReadOnly = false;
+            dgvConfiguracionBD.Refresh();
+        }
     }
 }

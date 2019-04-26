@@ -50,17 +50,17 @@ namespace PRUEBA_CLIENTES1.Datos
                 if (!String.IsNullOrEmpty(clientes.Id))
                 {
                     campos.Append("cli.clave = @Id AND ");
-                    parametros.Add(new FbParameter("@Id", clientes.Id.Trim()));
+                    parametros.Add(new FbParameter("@Id", clientes.Id));
                 }
                 if (!String.IsNullOrEmpty(clientes.Nombre.Trim()))
                 {
                     campos.Append("cli.nombre like @Nombre AND ");
-                    parametros.Add(new FbParameter("@Nombre", "%" + clientes.Nombre + "%")); 
+                    parametros.Add(new FbParameter("@Nombre", "%" + clientes.Nombre.ToUpper() + "%")); 
                 }
                 if (!String.IsNullOrEmpty(clientes.Rfc.Trim()))
                 {
                     campos.Append("cli.rfc like @Rfc AND ");
-                    parametros.Add(new FbParameter("@Rfc", "%" + clientes.Rfc + "%"));
+                    parametros.Add(new FbParameter("@Rfc", "%" + clientes.Rfc.ToUpper() + "%"));
                 }
                 if (!String.IsNullOrEmpty(clientes.Status.ToString().Trim()))
                 {
@@ -78,7 +78,7 @@ namespace PRUEBA_CLIENTES1.Datos
                     sQLString.Append(campos.ToString().Substring(0, campos.ToString().Length - 4));
                 }
 
-
+                Console.WriteLine(sQLString);
                 FbDataAdapter dataAdapter = new FbDataAdapter(ObtenerOrdenSQL(sQLString.ToString(),parametros));
                 dataAdapter.Fill(ds);
                // System.Windows.Forms.MessageBox.Show(ds.Tables[0].Rows.Count.ToString()); 
