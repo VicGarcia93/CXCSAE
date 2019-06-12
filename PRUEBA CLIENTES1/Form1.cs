@@ -74,7 +74,10 @@ namespace PRUEBA_CLIENTES1
             cboempresa.DataSource = LeerEmpresasCSV.GetInstance().GetEmpresas();
           
         }
-       
-       
+
+        private void cboempresa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

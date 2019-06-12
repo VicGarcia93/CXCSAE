@@ -21,9 +21,12 @@ namespace PRUEBA_CLIENTES1
         String fechaInicial;
         String fechaFinal;
         String status;
-
+        String empresa;
+        int contador;
+      
         public Clientes()
         {
+            contador = 0;
             InitializeComponent();
             FechaActual();
             cveIniCliente = "";
@@ -31,7 +34,9 @@ namespace PRUEBA_CLIENTES1
             fechaInicial = "";
             fechaFinal = "";
             status = "";
+           
             Inicio();
+            
         }
         private void Inicio()
         {
@@ -40,7 +45,7 @@ namespace PRUEBA_CLIENTES1
             cmbEstatus.SelectedIndex = 1;
             cmbFecha.SelectedIndex = 1;
             toolStripStatusLabel1.Text = FechaActual().Date.ToLongDateString();
-            
+
         }
 
         private void HolaMundo()
@@ -52,13 +57,13 @@ namespace PRUEBA_CLIENTES1
             DateTime dateTime;
             dateTime = DateTime.Now;
             return dateTime;
-           // toolStripStatusLabel1.Text =  dateTime.Date.ToLongDateString();
+            // toolStripStatusLabel1.Text =  dateTime.Date.ToLongDateString();
         }
         private void BuscarSaldos()
         {
             ClienteDAO clienteDAO = new ClienteDAO();
             ClienteDetalleVO clienteDetalleVO = new ClienteDetalleVO();
-            
+
 
             cveIniCliente = txtCveIniCliente.Text;
             cveFinCliente = txtCveFinCliente.Text;
@@ -72,9 +77,9 @@ namespace PRUEBA_CLIENTES1
 
             clienteDetalleVO.ClaveInicial = cveIniCliente;
             clienteDetalleVO.ClaveFinal = cveFinCliente;
-            clienteDetalleVO.FechaInicial = fechaInicial.Substring(3,3) + fechaInicial.Substring(0,3) + fechaInicial.Substring(6,4);
+            clienteDetalleVO.FechaInicial = fechaInicial.Substring(3, 3) + fechaInicial.Substring(0, 3) + fechaInicial.Substring(6, 4);
 
-            
+
             clienteDetalleVO.FechaFinal = fechaFinal.Substring(3, 3) + fechaFinal.Substring(0, 3) + fechaFinal.Substring(6, 4);
 
             clienteDetalleVO.Status = status.Substring(0, 1);
@@ -82,14 +87,14 @@ namespace PRUEBA_CLIENTES1
             //dgvSaldos.DataSource  = clienteDAO.GetClientesCargosAbonos(clienteDetalleVO);
             DataTable data = new DataTable();
             dgvSaldos.AutoGenerateColumns = false;
-            
+
             //MessageBox.Show("cantidad: " + clienteDAO.GetClientesCargosAbonos(clienteDetalleVO).Count);
             dgvSaldos.DataSource = clienteDAO.GetClientesCargosAbonos(clienteDetalleVO);
             dgvSaldos.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvSaldos.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            
+
         }
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -104,11 +109,11 @@ namespace PRUEBA_CLIENTES1
             Form1 form1 = Form1.GetInstance();
             form1.Close();
         }
- 
+
         private void pbCveFinCliente_Click(object sender, EventArgs e)
         {
             txtCveFinCliente.Text = GetClaveCliente();
-            
+
         }
         private String GetClaveCliente()
         {
@@ -137,6 +142,7 @@ namespace PRUEBA_CLIENTES1
 
         private void cmbFecha_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             switch (cmbFecha.SelectedIndex)
             {
                 case 0://NO SELECCIONAR FECHAS
@@ -180,15 +186,15 @@ namespace PRUEBA_CLIENTES1
 
                 case 5://ESTE MES 
 
-                   
-                    string fechames = FechaActual().ToShortDateString().Substring(4,1);
-                    string fechayear =FechaActual().ToShortDateString().Substring(6,4);
+
+                    string fechames = FechaActual().ToShortDateString().Substring(4, 1);
+                    string fechayear = FechaActual().ToShortDateString().Substring(6, 4);
 
 
-                   int daym = System.DateTime.DaysInMonth(int.Parse(fechayear), int.Parse(fechames));
+                    int daym = System.DateTime.DaysInMonth(int.Parse(fechayear), int.Parse(fechames));
                     Console.WriteLine(daym);
 
-          
+
                     string sini = "01" + FechaActual().ToShortDateString().Substring(2, 8);
                     string tfin = daym + FechaActual().ToShortDateString().Substring(2, 8);
 
@@ -208,16 +214,16 @@ namespace PRUEBA_CLIENTES1
                     int dayma;
                     int mesant1;
 
-                    if (fechamesr ==1)
+                    if (fechamesr == 1)
                     {
                         mesant = 12;
-                       yearant = int.Parse(fechayear1) - 1;
+                        yearant = int.Parse(fechayear1) - 1;
 
-                        dayma = System.DateTime.DaysInMonth(yearant,mesant);
+                        dayma = System.DateTime.DaysInMonth(yearant, mesant);
                         Console.WriteLine(dayma);
 
-                        string sinic = "01" +"/"+mesant+"/"+yearant;
-                        string tfinc = dayma+"/" + mesant + "/" + yearant;
+                        string sinic = "01" + "/" + mesant + "/" + yearant;
+                        string tfinc = dayma + "/" + mesant + "/" + yearant;
 
                         dateTimePicker3.Text = sinic;
                         dateTimePicker2.Text = tfinc;
@@ -236,7 +242,7 @@ namespace PRUEBA_CLIENTES1
                         dateTimePicker3.Text = sinic;
                         dateTimePicker2.Text = tfinc;
                     }
-              
+
                     break;
 
                 case 7://ESTE AÑO 
@@ -244,7 +250,7 @@ namespace PRUEBA_CLIENTES1
                     string yearactual = FechaActual().ToShortDateString().Substring(6, 4);
 
                     string sinict = "01" + "/" + "01" + "/" + yearactual;
-                    string tyearfi = "31" + "/" + "12"+ "/" + yearactual;
+                    string tyearfi = "31" + "/" + "12" + "/" + yearactual;
 
                     dateTimePicker3.Text = sinict;
                     dateTimePicker2.Text = tyearfi;
@@ -253,8 +259,8 @@ namespace PRUEBA_CLIENTES1
 
                 case 8://ENERO
 
-                     yearactual = FechaActual().ToShortDateString().Substring(6, 4);
-                   int mesene =1;
+                    yearactual = FechaActual().ToShortDateString().Substring(6, 4);
+                    int mesene = 1;
 
                     dayma = System.DateTime.DaysInMonth(int.Parse(yearactual), mesene);
                     Console.WriteLine(dayma);
@@ -356,7 +362,7 @@ namespace PRUEBA_CLIENTES1
                 case 14://JULIO
 
                     yearactual = FechaActual().ToShortDateString().Substring(6, 4);
-                     int mesjul = 7;
+                    int mesjul = 7;
 
                     dayma = System.DateTime.DaysInMonth(int.Parse(yearactual), mesjul);
                     Console.WriteLine(dayma);
@@ -457,12 +463,12 @@ namespace PRUEBA_CLIENTES1
                     break;
 
 
-                   case 20://AÑO ANTERIOR
+                case 20://AÑO ANTERIOR
                     yearactual = FechaActual().ToShortDateString().Substring(6, 4);
                     yearant = int.Parse(yearactual) - 1;
 
-                sinict = "01" + "/" + "01" + "/" + yearant;
-                   tyearfi = "31" + "/" + "12" + "/" + yearant;
+                    sinict = "01" + "/" + "01" + "/" + yearant;
+                    tyearfi = "31" + "/" + "12" + "/" + yearant;
 
                     dateTimePicker3.Text = sinict;
                     dateTimePicker2.Text = tyearfi;
@@ -470,7 +476,6 @@ namespace PRUEBA_CLIENTES1
                     break;
 
             }
-
         }
 
         private void LimpiarCampos()
@@ -483,14 +488,6 @@ namespace PRUEBA_CLIENTES1
 
         }
 
-        private void CboEmpresa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            RutaBD.Default.empresaEnUso = (CboEmpresa.SelectedIndex + 1).ToString();
-            RutaBD.Default.Save();
-            LimpiarCampos();
-        }
-
-       
         private void txtCveIniCliente_Leave(object sender, EventArgs e)
         {
             if (!Validaciones.GetInstance().ValidaClavesClientes(txtCveIniCliente.Text, txtCveFinCliente.Text))
@@ -499,7 +496,7 @@ namespace PRUEBA_CLIENTES1
                 txtCveIniCliente.Focus();
                 txtCveIniCliente.SelectAll();
             }
-            
+
         }
 
         private void txtCveFinCliente_Leave(object sender, EventArgs e)
@@ -510,7 +507,67 @@ namespace PRUEBA_CLIENTES1
                 txtCveFinCliente.Focus();
                 txtCveFinCliente.SelectAll();
             }
-            
+
+        }
+
+        private void cmbEstatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void CboEmpresa_SelectedIndexChanged_1(object sender, EventArgs e)
+
+        {
+            if (contador > 1)
+            {
+                empresa = CboEmpresa.SelectedValue.ToString();
+                MessageBox.Show("HAS INGRESADO A  " + empresa);
+
+
+                RutaBD.Default.empresaEnUso = (CboEmpresa.SelectedIndex + 1).ToString();
+                RutaBD.Default.Save();
+                LimpiarCampos();
+            }
+
+            else
+
+                contador++;
+        }
+
+        private void txtCveFinCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvSaldos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Clientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aRCHIVOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void toolStripStatusLabel2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
