@@ -85,6 +85,8 @@ C:\Users\Usuario 069\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTE
 C:\Users\Usuario 069\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA_CLIENTES1.Form1.yo-NG.resources
 C:\Users\Usuario 069\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\yo-NG\PRUEBA CLIENTES1.resources.dll
 C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\bin\Debug\yo-NG\PRUEBA CLIENTES1.resources.dll
-C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.csprojResolveAssemblyReference.cache
 C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA_CLIENTES1.Form1.yo-NG.resources
 C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\yo-NG\PRUEBA CLIENTES1.resources.dll
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.csprojAssemblyReference.cache
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO1\Documents\Visual Studio 2013\Projects\CXCSAE\PRUEBA CLIENTES1\obj\Debug\PRUEBA CLIENTES1.csproj.CopyComplete

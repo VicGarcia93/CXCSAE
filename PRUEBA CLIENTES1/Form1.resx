@@ -140,6 +140,9 @@
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 8.25pt</value>
   </data>
+  <data name="btnBuscar.Text" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
   <data name="&gt;&gt;lblseleccion.Name" xml:space="preserve">
     <value>lblseleccion</value>
   </data>
@@ -155,11 +158,11 @@
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
     <value>874, 20</value>
   </data>
+  <data name="&gt;&gt;button3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
     <value>panel3</value>
-  </data>
-  <data name="button9.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
   </data>
   <data name="ptebxempresa.Location" type="System.Drawing.Point, System.Drawing">
     <value>388, 84</value>
@@ -201,8 +204,8 @@
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ptebxempresa.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -281,9 +284,6 @@
   </data>
   <data name="ptebxempresa.Size" type="System.Drawing.Size, System.Drawing">
     <value>291, 151</value>
-  </data>
-  <data name="button3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Rounded MT Bold, 9.75pt</value>
   </data>
   <data name="button2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Italic</value>
@@ -381,9 +381,6 @@
   <data name="button3.Text" xml:space="preserve">
     <value>Buscar</value>
   </data>
-  <data name="&gt;&gt;button8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="btnBuscar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Rounded MT Bold, 9.75pt</value>
   </data>
@@ -398,6 +395,9 @@
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
   </data>
   <data name="button8.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -438,9 +438,6 @@
   <data name="label2.Text" xml:space="preserve">
     <value>Creado por : Víctor García</value>
   </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;ptebxempresa.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
@@ -450,8 +447,8 @@
   <data name="&gt;&gt;button8.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="button9.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="&gt;&gt;button1.Name" xml:space="preserve">
     <value>button1</value>
@@ -516,8 +513,8 @@
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>728, 3</value>
   </data>
-  <data name="btnBuscar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 33</value>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>537, 239</value>
   </data>
   <data name="&gt;&gt;button1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -528,14 +525,14 @@
   <data name="button3.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>537, 239</value>
+  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="button3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Rounded MT Bold, 9.75pt</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>838, 392</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>807, 358</value>
   </data>
   <data name="&gt;&gt;button3.Name" xml:space="preserve">
     <value>button3</value>
@@ -549,8 +546,8 @@
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
     <value>874, 20</value>
   </data>
-  <data name="btnBuscar.Text" xml:space="preserve">
-    <value>Buscar</value>
+  <data name="&gt;&gt;button8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnaceptar1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -563,6 +560,9 @@
   </data>
   <data name="button8.Text" xml:space="preserve">
     <value>Testing</value>
+  </data>
+  <data name="btnBuscar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 33</value>
   </data>
   <data name="ptebxlogo.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -585,8 +585,8 @@
   <data name="&gt;&gt;btnBuscar.Name" xml:space="preserve">
     <value>btnBuscar</value>
   </data>
-  <data name="&gt;&gt;button3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>807, 358</value>
   </data>
   <data name="btnBuscar.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>

@@ -140,10 +140,6 @@
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>949, 358</value>
-  </data>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -156,8 +152,21 @@
   <data name="ptebxlogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 8.25pt</value>
+  </data>
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 239</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 14</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Creado por : Víctor García &amp;&amp; Ana Aparicio</value>
   </data>
   <data name="ptebxempresa.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -173,5 +182,11 @@
   </data>
   <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>949, 358</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>CXC: ANTIGÜEDAD DE SALDOS</value>
   </data>
 </root>
