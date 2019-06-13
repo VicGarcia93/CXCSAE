@@ -43,9 +43,7 @@ namespace PRUEBA_CLIENTES1
             //Crear objeto de la clase Clientes
             //Creación del objeto
             Clientes clientes;
-
-            
-            
+                        
             //Mostrar Formulario
             PRUEBA_CLIENTES1.Properties.Settings.Default.empresaEnUso = (cboempresa.SelectedIndex + 1).ToString();
             PRUEBA_CLIENTES1.Properties.Settings.Default.Save();

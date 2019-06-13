@@ -39,7 +39,7 @@ namespace PRUEBA_CLIENTES1.Datos
                 ArrayList parametros = new ArrayList();
 
                 sQLString.Append(@"SELECT cli.clave,cli.nombre, cli.rfc, cli.status, cli.con_credito
-                                    FROM clie0" + RutaBD.Default.empresaEnUso  + " cli");
+                                    FROM clie0" + RutaBD.Default.empresaEnUso  + " cli ");
                 
 
                 if(clientes == null)
@@ -317,8 +317,8 @@ namespace PRUEBA_CLIENTES1.Datos
                 }
                
             }
-
-            return clientesCargosAbonos;
+            return clientesCargosAbonos.OrderBy(o => o.Nombre).ToList();
+            
         }
         //Recibe como parámetro fecha de aplicacíón del abono y fecha de documento factura
         private int DiferenciaFechasAbono(string fecha_apli,string fecha_doc)

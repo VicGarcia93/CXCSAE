@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Panel panel1;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbEstatus = new System.Windows.Forms.ComboBox();
@@ -57,6 +57,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aRCHIVOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cERRAREMPRESAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eXPORTARINFORMACIÓNToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvSaldos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,7 +69,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.eXPORTARINFORMACIÓNToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             panel1 = new System.Windows.Forms.Panel();
             panel1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -99,7 +99,7 @@
             panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
             panel1.Location = new System.Drawing.Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(1410, 163);
+            panel1.Size = new System.Drawing.Size(1336, 163);
             panel1.TabIndex = 0;
             // 
             // panel6
@@ -111,7 +111,7 @@
             this.panel6.Controls.Add(this.cmbEstatus);
             this.panel6.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel6.Location = new System.Drawing.Point(984, 59);
+            this.panel6.Location = new System.Drawing.Point(910, 59);
             this.panel6.Name = "panel6";
             this.panel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.panel6.Size = new System.Drawing.Size(260, 81);
@@ -156,7 +156,7 @@
             this.panel5.Controls.Add(this.dateTimePicker2);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel5.Location = new System.Drawing.Point(718, 59);
+            this.panel5.Location = new System.Drawing.Point(644, 59);
             this.panel5.MinimumSize = new System.Drawing.Size(260, 81);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(260, 81);
@@ -262,7 +262,7 @@
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.txtCveIniCliente);
             this.panel4.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel4.Location = new System.Drawing.Point(453, 59);
+            this.panel4.Location = new System.Drawing.Point(376, 59);
             this.panel4.MaximumSize = new System.Drawing.Size(260, 81);
             this.panel4.MinimumSize = new System.Drawing.Size(260, 81);
             this.panel4.Name = "panel4";
@@ -371,7 +371,7 @@
             this.LblEmpresa.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.LblEmpresa.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblEmpresa.ForeColor = System.Drawing.Color.Black;
-            this.LblEmpresa.Location = new System.Drawing.Point(3, 59);
+            this.LblEmpresa.Location = new System.Drawing.Point(7, 59);
             this.LblEmpresa.Name = "LblEmpresa";
             this.LblEmpresa.Size = new System.Drawing.Size(89, 22);
             this.LblEmpresa.TabIndex = 10;
@@ -381,7 +381,7 @@
             // 
             this.CboEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CboEmpresa.FormattingEnabled = true;
-            this.CboEmpresa.Location = new System.Drawing.Point(104, 59);
+            this.CboEmpresa.Location = new System.Drawing.Point(7, 90);
             this.CboEmpresa.Name = "CboEmpresa";
             this.CboEmpresa.Size = new System.Drawing.Size(339, 21);
             this.CboEmpresa.TabIndex = 8;
@@ -391,7 +391,7 @@
             // 
             this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(1255, 81);
+            this.btnBuscar.Location = new System.Drawing.Point(1181, 81);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(140, 37);
             this.btnBuscar.TabIndex = 7;
@@ -403,9 +403,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 760);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 660);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1444, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1370, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -421,7 +421,7 @@
             this.eXPORTARINFORMACIÓNToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1444, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -439,8 +439,16 @@
             // cERRAREMPRESAToolStripMenuItem
             // 
             this.cERRAREMPRESAToolStripMenuItem.Name = "cERRAREMPRESAToolStripMenuItem";
-            this.cERRAREMPRESAToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cERRAREMPRESAToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.cERRAREMPRESAToolStripMenuItem.Text = "CERRAR EMPRESA";
+            this.cERRAREMPRESAToolStripMenuItem.Click += new System.EventHandler(this.cERRAREMPRESAToolStripMenuItem_Click);
+            // 
+            // eXPORTARINFORMACIÓNToolStripMenuItem1
+            // 
+            this.eXPORTARINFORMACIÓNToolStripMenuItem1.Name = "eXPORTARINFORMACIÓNToolStripMenuItem1";
+            this.eXPORTARINFORMACIÓNToolStripMenuItem1.Size = new System.Drawing.Size(162, 20);
+            this.eXPORTARINFORMACIÓNToolStripMenuItem1.Text = "EXPORTAR INFORMACIÓN";
+            this.eXPORTARINFORMACIÓNToolStripMenuItem1.Click += new System.EventHandler(this.eXPORTARINFORMACIÓNToolStripMenuItem1_Click);
             // 
             // dgvSaldos
             // 
@@ -452,14 +460,14 @@
             this.dgvSaldos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSaldos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSaldos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSaldos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSaldos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSaldos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSaldos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -476,7 +484,7 @@
             this.dgvSaldos.Name = "dgvSaldos";
             this.dgvSaldos.ReadOnly = true;
             this.dgvSaldos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvSaldos.Size = new System.Drawing.Size(1474, 643);
+            this.dgvSaldos.Size = new System.Drawing.Size(1400, 543);
             this.dgvSaldos.TabIndex = 0;
             this.dgvSaldos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSaldos_CellContentClick);
             // 
@@ -552,26 +560,20 @@
             this.panel2.Controls.Add(this.dgvSaldos);
             this.panel2.Location = new System.Drawing.Point(12, 181);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1410, 561);
+            this.panel2.Size = new System.Drawing.Size(1336, 461);
             this.panel2.TabIndex = 1;
-            // 
-            // eXPORTARINFORMACIÓNToolStripMenuItem1
-            // 
-            this.eXPORTARINFORMACIÓNToolStripMenuItem1.Name = "eXPORTARINFORMACIÓNToolStripMenuItem1";
-            this.eXPORTARINFORMACIÓNToolStripMenuItem1.Size = new System.Drawing.Size(162, 20);
-            this.eXPORTARINFORMACIÓNToolStripMenuItem1.Text = "EXPORTAR INFORMACIÓN";
             // 
             // Clientes
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1444, 782);
+            this.ClientSize = new System.Drawing.Size(1370, 682);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(panel1);
             this.MaximizeBox = false;
             this.Name = "Clientes";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Clientes_FormClosed);
             this.Load += new System.EventHandler(this.Clientes_Load);
